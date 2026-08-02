@@ -1,5 +1,9 @@
 @import "tailwindcss";
 
+html {
+  scroll-behavior: smooth;
+}
+
 @layer base {
   body {
     font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
@@ -12,37 +16,71 @@
   font-family: 'Playfair Display', Georgia, serif;
 }
 
-/* Milky background helper */
-.bg-milk {
-  background-color: #FAF7F2;
+/* Glassmorphism Navigation Bar */
+.glass-nav {
+  background: rgba(255, 253, 249, 0.82);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(226, 232, 240, 0.8);
+  box-shadow: 0 10px 30px -10px rgba(114, 47, 55, 0.08);
 }
 
-.bg-milk-card {
-  background-color: #FFFDF9;
+.glass-pill {
+  background: rgba(241, 245, 249, 0.85);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(226, 232, 240, 0.9);
 }
 
-/* Touch of Wine helpers */
-.text-wine {
-  color: #722F37;
+/* Animations */
+@keyframes floatSlow {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-8px) rotate(1deg);
+  }
 }
 
-.bg-wine {
-  background-color: #722F37;
+@keyframes pulseGlow {
+  0%, 100% {
+    box-shadow: 0 0 15px rgba(114, 47, 55, 0.25);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(14, 165, 233, 0.4);
+  }
 }
 
-.bg-wine-light {
-  background-color: #FDF2F4;
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
 }
 
-.border-wine {
-  border-color: #722F37;
+.animate-float {
+  animation: floatSlow 6s ease-in-out infinite;
 }
 
-.border-wine-light {
-  border-color: #F87171;
+.animate-glow {
+  animation: pulseGlow 4s infinite;
 }
 
-/* Sky Blue & Wine Custom Scrollbar */
+.shimmer-btn {
+  background-size: 200% 100%;
+  background-image: linear-gradient(
+    110deg,
+    #722F37 0%,
+    #881337 40%,
+    #0EA5E9 50%,
+    #881337 60%,
+    #722F37 100%
+  );
+  animation: shimmer 5s infinite linear;
+}
+
+/* Custom Scrollbar */
 .custom-scrollbar::-webkit-scrollbar {
   width: 6px;
 }

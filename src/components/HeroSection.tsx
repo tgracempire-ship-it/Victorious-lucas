@@ -11,10 +11,10 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onPlayTrack, onOpenBoo
   const latestTrack = TRACKS[0];
 
   return (
-    <section id="hero" className="relative min-h-[90vh] flex items-center justify-center pt-32 pb-20 overflow-hidden bg-[#FAF7F2]">
-      {/* Ambient Milky, Wine & Sky Glows */}
-      <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-sky-200/40 rounded-full blur-[120px] pointer-events-none" />
-      <div className="absolute bottom-10 right-10 w-[450px] h-[450px] bg-rose-200/30 rounded-full blur-[120px] pointer-events-none" />
+    <section id="hero" className="relative min-h-[92vh] flex items-center justify-center pt-32 pb-20 overflow-hidden bg-[#FAF7F2]">
+      {/* Ambient Milky, Wine & Sky Floating Glows */}
+      <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-sky-200/40 rounded-full blur-[120px] pointer-events-none animate-float" />
+      <div className="absolute bottom-10 right-10 w-[450px] h-[450px] bg-rose-200/30 rounded-full blur-[120px] pointer-events-none animate-float" style={{ animationDelay: '2s' }} />
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
@@ -22,7 +22,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onPlayTrack, onOpenBoo
           {/* Main Hero Content */}
           <div className="lg:col-span-7 space-y-6 text-left">
             {/* Instagram Verification Badge */}
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white border border-rose-200 text-[#722F37] text-xs font-semibold shadow-xs">
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white border border-rose-200 text-[#722F37] text-xs font-semibold shadow-xs hover:scale-105 transition-transform">
               <span className="flex h-2 w-2 rounded-full bg-[#722F37] animate-pulse" />
               <Instagram className="w-3.5 h-3.5 text-[#722F37]" />
               <span className="uppercase tracking-wider text-[11px] text-slate-500">Official Instagram:</span>
@@ -53,7 +53,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onPlayTrack, onOpenBoo
             </p>
 
             {/* Scripture Badge */}
-            <div className="p-5 rounded-2xl bg-white border border-slate-200 space-y-1.5 max-w-xl shadow-xs">
+            <div className="p-5 rounded-2xl bg-white border border-slate-200 space-y-1.5 max-w-xl shadow-xs hover:border-[#722F37]/30 transition-all">
               <div className="flex items-center gap-2 text-xs font-bold text-[#722F37] font-mono uppercase tracking-widest">
                 <ShieldCheck className="w-4 h-4 text-sky-600" />
                 <span>Ministry Pillar & Scripture</span>
@@ -67,7 +67,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onPlayTrack, onOpenBoo
             <div className="pt-2 flex flex-wrap items-center gap-4">
               <button
                 onClick={() => onPlayTrack(latestTrack.id)}
-                className="inline-flex items-center gap-3 px-7 py-3.5 rounded-full text-xs uppercase tracking-widest font-bold bg-[#722F37] text-white hover:bg-[#58232B] shadow-md shadow-[#722F37]/25 transition-all transform hover:-translate-y-0.5 active:translate-y-0 cursor-pointer"
+                className="inline-flex items-center gap-3 px-7 py-3.5 rounded-full text-xs uppercase tracking-widest font-bold bg-[#722F37] text-white hover:bg-[#58232B] shadow-md shadow-[#722F37]/25 transition-all transform hover:-translate-y-1 hover:shadow-xl active:translate-y-0 cursor-pointer"
               >
                 <div className="w-7 h-7 rounded-full bg-white text-[#722F37] flex items-center justify-center shadow-xs">
                   <Play className="w-3.5 h-3.5 fill-[#722F37] translate-x-0.5" />
@@ -77,7 +77,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onPlayTrack, onOpenBoo
 
               <button
                 onClick={onOpenBooking}
-                className="inline-flex items-center gap-2 px-6 py-3.5 rounded-full text-xs uppercase tracking-widest font-bold text-slate-800 bg-white border border-slate-200 hover:border-[#722F37] hover:text-[#722F37] transition-all cursor-pointer shadow-xs"
+                className="inline-flex items-center gap-2 px-6 py-3.5 rounded-full text-xs uppercase tracking-widest font-bold text-slate-800 bg-white border border-slate-200 hover:border-[#722F37] hover:text-[#722F37] transition-all cursor-pointer shadow-xs hover:-translate-y-0.5"
               >
                 <Calendar className="w-4 h-4 text-sky-600" />
                 <span>Book For Event</span>
@@ -87,8 +87,8 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onPlayTrack, onOpenBoo
             {/* Stats Counter */}
             <div className="pt-6 border-t border-slate-200/80 grid grid-cols-2 sm:grid-cols-4 gap-4 max-w-xl">
               {ARTIST_INFO.stats.map((stat, idx) => (
-                <div key={idx} className="space-y-0.5">
-                  <div className="text-2xl sm:text-3xl font-serif italic text-[#722F37]">
+                <div key={idx} className="space-y-0.5 group">
+                  <div className="text-2xl sm:text-3xl font-serif italic text-[#722F37] group-hover:scale-110 transition-transform origin-left">
                     {stat.value}
                   </div>
                   <div className="text-xs text-slate-500 font-medium uppercase tracking-wider">
@@ -103,10 +103,10 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onPlayTrack, onOpenBoo
           <div className="lg:col-span-5 flex justify-center">
             <div className="relative w-full max-w-md group">
               
-              <div className="relative rounded-3xl bg-white border border-slate-200 p-6 shadow-xl space-y-5">
+              <div className="relative rounded-3xl bg-white border border-slate-200 p-6 shadow-xl space-y-5 group-hover:-translate-y-2 group-hover:shadow-2xl transition-all duration-500">
                 {/* Header Badge */}
                 <div className="flex items-center justify-between">
-                  <span className="px-3.5 py-1 rounded-full text-[10px] font-bold tracking-widest uppercase bg-[#722F37] text-white">
+                  <span className="px-3.5 py-1 rounded-full text-[10px] font-bold tracking-widest uppercase bg-[#722F37] text-white shadow-xs">
                     MAIN OFFICIAL PORTRAIT
                   </span>
                   <span className="text-xs text-slate-500 font-mono flex items-center gap-1">
@@ -115,14 +115,14 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onPlayTrack, onOpenBoo
                 </div>
 
                 {/* Main Single Image in Natural Oval/Pill Shape */}
-                <div className="relative aspect-square rounded-[140px] overflow-hidden shadow-inner group-hover:scale-[1.01] transition-transform duration-300 border-4 border-slate-100">
+                <div className="relative aspect-square rounded-[140px] overflow-hidden shadow-inner border-4 border-slate-100 group-hover:border-rose-100 transition-all duration-500">
                   <img
                     src={ARTIST_INFO.heroImage}
                     alt={ARTIST_INFO.name}
                     referrerPolicy="no-referrer"
-                    className="w-full h-full object-cover object-top"
+                    className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent opacity-40" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent opacity-40 group-hover:opacity-30 transition-opacity" />
                   
                   {/* Play Overlay Button */}
                   <button
@@ -147,7 +147,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onPlayTrack, onOpenBoo
                 {/* IG Follow Tag inside card */}
                 <div className="pt-3 border-t border-slate-100 flex items-center justify-between text-xs text-slate-500">
                   <span className="flex items-center gap-1 text-slate-700">
-                    <Sparkles className="w-3.5 h-3.5 text-sky-500" /> Spirit-Filled Anointing
+                    <Sparkles className="w-3.5 h-3.5 text-sky-500 animate-spin" style={{ animationDuration: '8s' }} /> Spirit-Filled Anointing
                   </span>
                   <a
                     href={ARTIST_INFO.igUrl}
