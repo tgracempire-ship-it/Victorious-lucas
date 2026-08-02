@@ -31,14 +31,67 @@ From intimate altar calls to massive festival stages, Victorious' single-minded 
   socialLinks: {
     instagram: "https://instagram.com/victorious_tlucas",
     youtube: "https://youtube.com/@victorious_tlucas",
-    spotify: "https://open.spotify.com/artist/victorious_tlucas",
-    appleMusic: "https://music.apple.com/artist/victorious-tlucas",
+    spotify: "https://open.spotify.com/track/1BwtXJJhh2WHMCzGEmOr3X",
+    appleMusic: "https://music.apple.com/artist/victorious-lucas",
     tiktok: "https://tiktok.com/@victorious_tlucas",
-    facebook: "https://facebook.com/victorioustlucasgospel"
+    facebook: "https://www.facebook.com/share/14jisyhVxpz/?mibextid=wwXIfr"
   }
 };
 
 export const TRACKS: Track[] = [
+  {
+    id: "track-the-journey",
+    title: "The Journey",
+    album: "The Journey - Single",
+    releaseYear: "2025",
+    duration: "3:26",
+    coverImage: "https://i.scdn.co/image/ab67616d00001e02a668d944ec9b39b83b5d93c2",
+    featured: true,
+    lyrics: `[Verse 1]
+On this road of faith I walk with You
+Every step guided by Your truth
+Through the valley and the mountain high
+In Your grace I will abide
+
+[Chorus]
+This journey with You Lord is glorious
+In Jesus' name we are victorious
+Every trial turns to victory
+Your presence is my destiny!
+
+[Outro]
+Vic Lucas, Victorious Lucas, House of Faith
+Glory to His Name!`,
+    story: "A soul-stirring worship anthem by Vic Lucas, Victorious Lucas, and House of Faith expressing deep trust through life's spiritual journey.",
+    spotifyUrl: "https://open.spotify.com/track/1BwtXJJhh2WHMCzGEmOr3X?si=ZVce0BscTTSRN1y4o6VvyA",
+    appleMusicUrl: "https://music.apple.com",
+    youtubeUrl: "https://youtube.com",
+    audiomackUrl: "https://audiomack.com"
+  },
+  {
+    id: "track-alagbara",
+    title: "Alagbara (Extended Version)",
+    album: "Alagbara",
+    releaseYear: "2025",
+    duration: "11:43",
+    coverImage: "https://i.scdn.co/image/ab67616d0000b273558706eddfde411ad455ec93",
+    featured: true,
+    lyrics: `[Spontaneous Worship Ministration]
+Alagbara nla ni O, God of all Power!
+No kingdom can stand against Your throne
+From generation to generation You remain Almighty God!
+
+[Refrain]
+Alagbara! Powerful God!
+You do what no man can do
+You heal the broken, You restore the lost
+All power belongs to Jesus!`,
+    story: "A profound 11-minute live extended worship encounter featuring Ty Bello, Victorious Lucas, Pastor Shola Okodugha, Folabi Nuel, Pelumi Deborah, and anointed song ministers.",
+    spotifyUrl: "https://open.spotify.com/track/0BDkEbQLtLfu8rGTyFwiXA?si=AfT9YDD2S9SUKK9RN301ag",
+    appleMusicUrl: "https://music.apple.com",
+    youtubeUrl: "https://youtube.com",
+    audiomackUrl: "https://audiomack.com"
+  },
   {
     id: "track-1",
     title: "Victorious Grace",
@@ -46,7 +99,7 @@ export const TRACKS: Track[] = [
     releaseYear: "2026",
     duration: "4:32",
     coverImage: albumImg,
-    featured: true,
+    featured: false,
     lyrics: `[Verse 1]
 Out of the shadows into Your light
 You pulled my soul from the darkest night
@@ -58,25 +111,9 @@ Oh Your grace is victorious
 Your name is glorious
 Over every storm, over every trial
 Lord You reign eternal, child of Your grace
-Victorious grace!
-
-[Verse 2]
-Every promise You spoke will stand
-My future rests inside Your hand
-I will praise with a thankful heart
-From Your love I'll never part
-
-[Bridge]
-No weapon formed shall prosper here
-Your Holy Spirit drives out fear
-We shout Your praise, we lift You high
-Our God is alive!
-
-[Outro]
-Victorious grace, victorious grace!
-Amen, Amen!`,
+Victorious grace!`,
     story: "Written during an intense season of prayer and thanksgiving, 'Victorious Grace' serves as a reminder that through Christ, we overcome every trial.",
-    spotifyUrl: "https://open.spotify.com",
+    spotifyUrl: "https://open.spotify.com/track/1BwtXJJhh2WHMCzGEmOr3X",
     appleMusicUrl: "https://apple.com/music",
     youtubeUrl: "https://youtube.com",
     audiomackUrl: "https://audiomack.com"
@@ -88,7 +125,7 @@ Amen, Amen!`,
     releaseYear: "2025",
     duration: "5:15",
     coverImage: heroImg,
-    featured: true,
+    featured: false,
     lyrics: `[Verse]
 King of Kings, Lord of Lords
 Endless praise be unto You
@@ -101,42 +138,7 @@ On the throne of majesty
 Forever and ever the same
 Lord of everlasting reign!`,
     story: "A majestic worship anthem celebrating the unshakeable sovereignty of God over all nations.",
-    spotifyUrl: "https://open.spotify.com",
-    appleMusicUrl: "https://apple.com/music",
-    youtubeUrl: "https://youtube.com",
-    audiomackUrl: "https://audiomack.com"
-  },
-  {
-    id: "track-3",
-    title: "Surrender & Praise",
-    album: "Atmosphere of Praise",
-    releaseYear: "2025",
-    duration: "6:08",
-    coverImage: portraitImg,
-    featured: false,
-    lyrics: `[Chorus]
-I surrender my heart, I surrender my life
-Take all of me Lord, let Your glory shine bright!`,
-    story: "A deep altar call song designed to usher believers into consecrated devotion.",
-    spotifyUrl: "https://open.spotify.com",
-    appleMusicUrl: "https://apple.com/music",
-    youtubeUrl: "https://youtube.com",
-    audiomackUrl: "https://audiomack.com"
-  },
-  {
-    id: "track-4",
-    title: "Atmosphere of Miracles",
-    album: "Victorious Grace - Single",
-    releaseYear: "2024",
-    duration: "4:48",
-    coverImage: albumImg,
-    featured: false,
-    lyrics: `[Bridge]
-Miracles are happening now
-Signs and wonders falling down
-In Jesus' name, be healed today!`,
-    story: "Recorded live during a worship night, capturing raw faith and divine expectation.",
-    spotifyUrl: "https://open.spotify.com",
+    spotifyUrl: "https://open.spotify.com/track/0BDkEbQLtLfu8rGTyFwiXA",
     appleMusicUrl: "https://apple.com/music",
     youtubeUrl: "https://youtube.com",
     audiomackUrl: "https://audiomack.com"

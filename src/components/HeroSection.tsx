@@ -72,7 +72,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onPlayTrack, onOpenBoo
                 <div className="w-7 h-7 rounded-full bg-white text-[#5A5A40] flex items-center justify-center">
                   <Play className="w-3.5 h-3.5 fill-[#5A5A40] translate-x-0.5" />
                 </div>
-                <span>Play "Victorious Grace"</span>
+                <span>Play "{latestTrack.title}"</span>
               </button>
 
               <button
@@ -110,7 +110,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onPlayTrack, onOpenBoo
                     LATEST GOSPEL SINGLE
                   </span>
                   <span className="text-xs text-[#8B7E66] font-mono flex items-center gap-1">
-                    <Volume2 className="w-3.5 h-3.5 text-[#5A5A40]" /> 2026 RELEASE
+                    <Volume2 className="w-3.5 h-3.5 text-[#5A5A40]" /> {latestTrack.releaseYear} RELEASE
                   </span>
                 </div>
 
