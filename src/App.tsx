@@ -29,7 +29,7 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-slate-50 text-slate-900 font-sans selection:bg-sky-400 selection:text-white">
+    <div className="min-h-screen bg-[#FAF7F2] text-slate-900 font-sans selection:bg-sky-400 selection:text-white">
       {/* Sticky Navigation */}
       <Navbar onOpenBooking={() => setIsBookingModalOpen(true)} />
 

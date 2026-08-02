@@ -13,8 +13,8 @@ export const ARTIST_INFO = {
   igUrl: "https://instagram.com/victorious_tlucas",
   title: "Gospel Recording Artist, Worship Leader & Songwriter",
   motto: "Lifting Hearts & Glorifying Grace Through Spirit-Filled Worship",
-  heroImage: vicStageRedSuitClose,
-  portraitImage: vicStageWhiteShirt,
+  heroImage: vicOfficialImg,
+  portraitImage: vicOfficialImg,
   bioSummary: "Victorious Tlucas (@victorious_tlucas) is an anointed gospel worship leader and songwriter dedicated to leading believers into profound encounters with God's presence. With soul-stirring vocals, rich harmonies, and spirit-led lyrics, Victorious travels internationally bringing light, hope, and victory to generations.",
   fullBio: `Victorious Tlucas is a vibrant gospel recording artist, song minister, and passionate worship leader whose ministry has touched thousands of lives across churches, revival conferences, and global digital platforms. 
 
