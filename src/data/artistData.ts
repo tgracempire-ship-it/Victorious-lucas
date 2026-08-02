@@ -1,5 +1,6 @@
 import { Track, TourEvent, InstagramPost, Testimonial, VideoItem } from '../types';
 
+import vicOfficialImg from '../assets/images/vic_portrait_official.jpg';
 import heroImg from '../assets/images/victorious_worship_hero_1785687891278.jpg';
 import portraitImg from '../assets/images/victorious_portrait_1785687874603.jpg';
 import albumImg from '../assets/images/victorious_album_cover_1785687904837.jpg';
@@ -10,8 +11,8 @@ export const ARTIST_INFO = {
   igUrl: "https://instagram.com/victorious_tlucas",
   title: "Gospel Recording Artist, Worship Leader & Songwriter",
   motto: "Lifting Hearts & Glorifying Grace Through Spirit-Filled Worship",
-  heroImage: heroImg,
-  portraitImage: portraitImg,
+  heroImage: vicOfficialImg,
+  portraitImage: vicOfficialImg,
   bioSummary: "Victorious Tlucas (@victorious_tlucas) is an anointed gospel worship leader and songwriter dedicated to leading believers into profound encounters with God's presence. With soul-stirring vocals, rich harmonies, and spirit-led lyrics, Victorious travels internationally bringing light, hope, and victory to generations.",
   fullBio: `Victorious Tlucas is a vibrant gospel recording artist, song minister, and passionate worship leader whose ministry has touched thousands of lives across churches, revival conferences, and global digital platforms. 
 
@@ -203,29 +204,29 @@ export const TOUR_EVENTS: TourEvent[] = [
 export const INSTAGRAM_POSTS: InstagramPost[] = [
   {
     id: "ig-1",
+    type: "photo",
+    imageUrl: vicOfficialImg,
+    caption: "'Thanks be to God who always leads us in triumph!' 🕊️ Remembering that your current trial is just the backdrop for your upcoming testimony. Stay blessed family! @victorious_tlucas",
+    likes: "6,850",
+    comments: "542",
+    date: "TODAY",
+    url: "https://instagram.com/victorious_tlucas"
+  },
+  {
+    id: "ig-2",
     type: "reel",
     imageUrl: heroImg,
-    caption: "What a powerful atmosphere at last night's worship encounter! God truly inhabits the praises of His people 🙌🔥 #VictoriousTlucas #VictoriousGrace #GospelMusic #WorshipLeader @victorious_tlucas",
+    caption: "What a powerful atmosphere at last night's worship encounter! God truly inhabits the praises of His people 🙌🔥 #VictoriousTlucas #TheJourney #GospelMusic #WorshipLeader @victorious_tlucas",
     likes: "4,820",
     comments: "342",
     date: "2 DAYS AGO",
     url: "https://instagram.com/victorious_tlucas"
   },
   {
-    id: "ig-2",
-    type: "photo",
-    imageUrl: portraitImg,
-    caption: "'Thanks be to God who always leads us in triumph!' 🕊️ Remembering that your current trial is just the backdrop for your upcoming testimony. Stay blessed family! @victorious_tlucas",
-    likes: "6,150",
-    comments: "512",
-    date: "4 DAYS AGO",
-    url: "https://instagram.com/victorious_tlucas"
-  },
-  {
     id: "ig-3",
     type: "photo",
     imageUrl: albumImg,
-    caption: "MY NEW SINGLE 'VICTORIOUS GRACE' IS OUT NOW ON ALL STREAMING PLATFORMS! 🎶 Link in bio! Drop a ❤️ if this song blesses your heart! @victorious_tlucas",
+    caption: "MY NEW SINGLE 'THE JOURNEY' IS OUT NOW ON SPOTIFY & ALL STREAMING PLATFORMS! 🎶 Link in bio! Drop a ❤️ if this song blesses your heart! @victorious_tlucas",
     likes: "8,930",
     comments: "780",
     date: "1 WEEK AGO",
@@ -234,8 +235,8 @@ export const INSTAGRAM_POSTS: InstagramPost[] = [
   {
     id: "ig-4",
     type: "video",
-    imageUrl: heroImg,
-    caption: "Behind the scenes recording 'Everlasting Reign'. The vocal harmonies on this section gave me goosebumps. Can't wait for you all to hear full live version! 🎙️✨ @victorious_tlucas",
+    imageUrl: vicOfficialImg,
+    caption: "Behind the scenes recording 'Alagbara' (Extended Version) with Ty Bello & worship ministers. The vocal harmonies on this section give goosebumps! 🎙️✨ @victorious_tlucas",
     likes: "5,410",
     comments: "298",
     date: "2 WEEKS AGO",
@@ -246,27 +247,27 @@ export const INSTAGRAM_POSTS: InstagramPost[] = [
 export const VIDEOS: VideoItem[] = [
   {
     id: "v-1",
-    title: "Victorious Grace - Official Live Worship Performance",
+    title: "The Journey - Official Worship Video",
     youtubeId: "dQw4w9WgXcQ",
-    thumbnail: heroImg,
-    duration: "4:35",
-    views: "245K views",
-    category: "Live Worship"
+    thumbnail: vicOfficialImg,
+    duration: "3:30",
+    views: "320K views",
+    category: "Music Video"
   },
   {
     id: "v-2",
-    title: "Everlasting Reign - Acoustic Session in Studio",
+    title: "Alagbara (Extended Version) - Live Ministration with Ty Bello",
     youtubeId: "dQw4w9WgXcQ",
-    thumbnail: portraitImg,
-    duration: "5:20",
-    views: "180K views",
-    category: "Acoustic"
+    thumbnail: heroImg,
+    duration: "11:43",
+    views: "580K views",
+    category: "Live Worship"
   },
   {
     id: "v-3",
     title: "The Heart Behind the Music - Ministry Testimony",
     youtubeId: "dQw4w9WgXcQ",
-    thumbnail: albumImg,
+    thumbnail: vicOfficialImg,
     duration: "8:15",
     views: "95K views",
     category: "Testimony"
