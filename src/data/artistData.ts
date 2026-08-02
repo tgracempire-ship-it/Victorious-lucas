@@ -49,6 +49,8 @@ export const TRACKS: Track[] = [
     releaseYear: "2025",
     duration: "3:26",
     coverImage: "https://i.scdn.co/image/ab67616d00001e02a668d944ec9b39b83b5d93c2",
+    spotifyTrackId: "1BwtXJJhh2WHMCzGEmOr3X",
+    youtubeVideoId: "s9tY81G11zM",
     featured: true,
     lyrics: `[Verse 1]
 On this road of faith I walk with You
@@ -67,8 +69,8 @@ Vic Lucas, Victorious Lucas, House of Faith
 Glory to His Name!`,
     story: "A soul-stirring worship anthem by Vic Lucas, Victorious Lucas, and House of Faith expressing deep trust through life's spiritual journey.",
     spotifyUrl: "https://open.spotify.com/track/1BwtXJJhh2WHMCzGEmOr3X?si=ZVce0BscTTSRN1y4o6VvyA",
-    appleMusicUrl: "https://music.apple.com",
-    youtubeUrl: "https://youtube.com",
+    appleMusicUrl: "https://music.apple.com/artist/victorious-lucas",
+    youtubeUrl: "https://www.youtube.com/watch?v=s9tY81G11zM",
     audiomackUrl: "https://audiomack.com"
   },
   {
@@ -78,6 +80,8 @@ Glory to His Name!`,
     releaseYear: "2025",
     duration: "11:43",
     coverImage: "https://i.scdn.co/image/ab67616d0000b273558706eddfde411ad455ec93",
+    spotifyTrackId: "0BDkEbQLtLfu8rGTyFwiXA",
+    youtubeVideoId: "F3aJz02e9S0",
     featured: true,
     lyrics: `[Spontaneous Worship Ministration]
 Alagbara nla ni O, God of all Power!
@@ -91,8 +95,8 @@ You heal the broken, You restore the lost
 All power belongs to Jesus!`,
     story: "A profound 11-minute live extended worship encounter featuring Ty Bello, Victorious Lucas, Pastor Shola Okodugha, Folabi Nuel, Pelumi Deborah, and anointed song ministers.",
     spotifyUrl: "https://open.spotify.com/track/0BDkEbQLtLfu8rGTyFwiXA?si=AfT9YDD2S9SUKK9RN301ag",
-    appleMusicUrl: "https://music.apple.com",
-    youtubeUrl: "https://youtube.com",
+    appleMusicUrl: "https://music.apple.com/artist/victorious-lucas",
+    youtubeUrl: "https://www.youtube.com/watch?v=F3aJz02e9S0",
     audiomackUrl: "https://audiomack.com"
   },
   {
@@ -102,6 +106,8 @@ All power belongs to Jesus!`,
     releaseYear: "2026",
     duration: "4:32",
     coverImage: vicStageRedSuitFull,
+    spotifyTrackId: "1BwtXJJhh2WHMCzGEmOr3X",
+    youtubeVideoId: "s9tY81G11zM",
     featured: false,
     lyrics: `[Verse 1]
 Out of the shadows into Your light
@@ -118,7 +124,7 @@ Victorious grace!`,
     story: "Written during an intense season of prayer and thanksgiving, 'Victorious Grace' serves as a reminder that through Christ, we overcome every trial.",
     spotifyUrl: "https://open.spotify.com/track/1BwtXJJhh2WHMCzGEmOr3X",
     appleMusicUrl: "https://apple.com/music",
-    youtubeUrl: "https://youtube.com",
+    youtubeUrl: "https://www.youtube.com/watch?v=s9tY81G11zM",
     audiomackUrl: "https://audiomack.com"
   },
   {
@@ -128,6 +134,8 @@ Victorious grace!`,
     releaseYear: "2025",
     duration: "5:15",
     coverImage: vicStageBlackJacket,
+    spotifyTrackId: "0BDkEbQLtLfu8rGTyFwiXA",
+    youtubeVideoId: "F3aJz02e9S0",
     featured: false,
     lyrics: `[Verse]
 King of Kings, Lord of Lords
@@ -143,7 +151,7 @@ Lord of everlasting reign!`,
     story: "A majestic worship anthem celebrating the unshakeable sovereignty of God over all nations.",
     spotifyUrl: "https://open.spotify.com/track/0BDkEbQLtLfu8rGTyFwiXA",
     appleMusicUrl: "https://apple.com/music",
-    youtubeUrl: "https://youtube.com",
+    youtubeUrl: "https://www.youtube.com/watch?v=F3aJz02e9S0",
     audiomackUrl: "https://audiomack.com"
   }
 ];

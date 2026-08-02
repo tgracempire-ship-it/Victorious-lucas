@@ -5,7 +5,9 @@ export interface Track {
   releaseYear: string;
   duration: string;
   coverImage: string;
-  audioUrl?: string; // Standard or synthesized audio sample
+  audioUrl?: string; // Audio file URL
+  spotifyTrackId?: string; // Spotify track ID for direct Spotify web player embed
+  youtubeVideoId?: string; // YouTube video ID for real audio/video embed
   lyrics: string;
   story: string;
   featured: boolean;

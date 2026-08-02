@@ -1,8 +1,7 @@
-import React, { useState, useEffect } from 'react';
-import { Play, Pause, Volume2, VolumeX, Music, FileText, ExternalLink, Disc } from 'lucide-react';
+import React, { useState } from 'react';
+import { Play, Pause, Music, FileText, ExternalLink, Sparkles, Youtube, Disc } from 'lucide-react';
 import { Track } from '../types';
 import { TRACKS } from '../data/artistData';
-import { audioSynth } from '../utils/audioSynth';
 
 interface AudioPlayerSectionProps {
   activeTrackId: string;
@@ -15,152 +14,128 @@ export const AudioPlayerSection: React.FC<AudioPlayerSectionProps> = ({
   onSelectTrack,
   onOpenLyrics,
 }) => {
-  const [isPlaying, setIsPlaying] = useState(false);
-  const [playbackTime, setPlaybackTime] = useState(0);
-  const [isMuted, setIsMuted] = useState(false);
+  const [playerSource, setPlayerSource] = useState<'spotify' | 'youtube'>('spotify');
 
   const activeTrack = TRACKS.find((t) => t.id === activeTrackId) || TRACKS[0];
 
-  useEffect(() => {
-    if (isPlaying) {
-      audioSynth.playGospelChords((sec) => {
-        setPlaybackTime(sec);
-      });
-    } else {
-      audioSynth.stop();
-    }
-    return () => audioSynth.stop();
-  }, [isPlaying, activeTrackId]);
-
-  const togglePlay = () => {
-    setIsPlaying(!isPlaying);
-  };
-
   const handleTrackChange = (id: string) => {
     onSelectTrack(id);
-    setPlaybackTime(0);
-    setIsPlaying(true);
-  };
-
-  const formatTime = (seconds: number) => {
-    const mins = Math.floor(seconds / 60);
-    const secs = seconds % 60;
-    return `${mins}:${secs < 10 ? '0' : ''}${secs}`;
   };
 
   return (
-    <section id="music" className="py-20 bg-slate-100/70 relative overflow-hidden border-y border-slate-200">
-      {/* Background glow accent */}
-      <div className="absolute top-1/2 left-0 w-96 h-96 bg-sky-200/50 rounded-full blur-3xl pointer-events-none" />
+    <section id="music" className="py-20 bg-[#FAF7F2] relative overflow-hidden border-y border-slate-200">
+      {/* Ambient Glows */}
+      <div className="absolute top-1/2 left-0 w-96 h-96 bg-sky-200/40 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute bottom-0 right-0 w-96 h-96 bg-rose-200/30 rounded-full blur-3xl pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-12 space-y-3">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-sky-50 border border-sky-200 text-sky-700 text-xs font-mono font-semibold uppercase tracking-widest">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white border border-rose-200 text-[#722F37] text-xs font-mono font-semibold uppercase tracking-widest shadow-xs">
             <Music className="w-3.5 h-3.5 text-sky-600" />
-            <span>Spiritual Discography & Player</span>
+            <span>Official Digital Audio & Media Stream</span>
           </div>
           <h2 className="text-3xl sm:text-4xl font-serif text-slate-900 tracking-tight">
             GOSPEL ANTHEMS & WORSHIP SOUNDS
           </h2>
           <p className="text-slate-600 text-sm sm:text-base font-light">
-            Stream spirit-filled gospel releases by Victorious_tlucas. Click play to listen to audio previews and view lyrics.
+            Stream official releases by Victorious_tlucas directly via Spotify and YouTube player integration.
           </p>
         </div>
 
         {/* Main Audio Player Container */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center bg-white rounded-3xl p-6 sm:p-8 border border-slate-200 shadow-md">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start bg-white rounded-3xl p-6 sm:p-8 border border-slate-200 shadow-md">
           
-          {/* Left: Active Track Display & Controls */}
+          {/* Left: Active Track Embed & Source Selector */}
           <div className="lg:col-span-5 space-y-6 flex flex-col items-center text-center lg:items-start lg:text-left">
-            <div className="relative group w-48 h-48 sm:w-60 sm:h-60 rounded-full sm:rounded-[120px] overflow-hidden shadow-md border-4 border-slate-100">
-              <img
-                src={activeTrack.coverImage}
-                alt={activeTrack.title}
-                referrerPolicy="no-referrer"
-                className={`w-full h-full object-cover transition-transform duration-700 ${
-                  isPlaying ? 'scale-105' : 'group-hover:scale-105'
+            
+            {/* Source Switcher (Spotify vs YouTube) */}
+            <div className="w-full flex items-center justify-between p-1 bg-[#FAF7F2] rounded-full border border-slate-200">
+              <button
+                onClick={() => setPlayerSource('spotify')}
+                className={`flex-1 py-2 px-3 rounded-full text-xs font-bold uppercase tracking-wider transition-all cursor-pointer flex items-center justify-center gap-1.5 ${
+                  playerSource === 'spotify'
+                    ? 'bg-[#722F37] text-white shadow-xs'
+                    : 'text-slate-600 hover:text-[#722F37]'
                 }`}
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent opacity-40" />
-              
-              {/* Disc Vinyl Spin Effect when playing */}
-              {isPlaying && (
-                <div className="absolute top-3 right-3 w-8 h-8 rounded-full bg-sky-600 text-white flex items-center justify-center animate-spin">
-                  <Disc className="w-5 h-5" />
+              >
+                <Music className="w-3.5 h-3.5 text-emerald-400" />
+                <span>Spotify Stream</span>
+              </button>
+              <button
+                onClick={() => setPlayerSource('youtube')}
+                className={`flex-1 py-2 px-3 rounded-full text-xs font-bold uppercase tracking-wider transition-all cursor-pointer flex items-center justify-center gap-1.5 ${
+                  playerSource === 'youtube'
+                    ? 'bg-[#722F37] text-white shadow-xs'
+                    : 'text-slate-600 hover:text-[#722F37]'
+                }`}
+              >
+                <Youtube className="w-3.5 h-3.5 text-red-500" />
+                <span>YouTube Video</span>
+              </button>
+            </div>
+
+            {/* Embedded Live Media Player */}
+            <div className="w-full space-y-3">
+              {playerSource === 'spotify' ? (
+                <div className="w-full rounded-2xl overflow-hidden shadow-sm border border-slate-200 bg-[#FAF7F2] p-1">
+                  <iframe
+                    style={{ borderRadius: '14px' }}
+                    src={`https://open.spotify.com/embed/track/${activeTrack.spotifyTrackId || '1BwtXJJhh2WHMCzGEmOr3X'}?utm_source=generator&theme=0`}
+                    width="100%"
+                    height="152"
+                    frameBorder="0"
+                    allowFullScreen
+                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                    loading="lazy"
+                    title={activeTrack.title}
+                  />
+                </div>
+              ) : (
+                <div className="w-full aspect-video rounded-2xl overflow-hidden shadow-sm border border-slate-200 bg-black">
+                  <iframe
+                    className="w-full h-full"
+                    src={`https://www.youtube.com/embed/${activeTrack.youtubeVideoId || 's9tY81G11zM'}`}
+                    title={activeTrack.title}
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                  />
                 </div>
               )}
             </div>
 
-            <div className="space-y-1 w-full">
-              <span className="text-xs font-mono uppercase tracking-widest text-sky-600 font-semibold">
-                Now Playing
+            <div className="space-y-1 w-full text-left">
+              <span className="text-xs font-mono uppercase tracking-widest text-[#722F37] font-semibold flex items-center gap-1">
+                <Sparkles className="w-3 h-3 text-sky-500" /> Now Playing Track
               </span>
               <h3 className="text-2xl font-serif text-slate-900">{activeTrack.title}</h3>
-              <p className="text-sm text-slate-500">{activeTrack.album} ({activeTrack.releaseYear})</p>
+              <p className="text-sm text-slate-500">{activeTrack.album} ({activeTrack.releaseYear}) • {activeTrack.duration}</p>
             </div>
 
-            {/* Audio Wave Visualizer Simulation */}
-            <div className="w-full space-y-2">
-              <div className="flex items-center justify-between text-xs font-mono text-slate-600">
-                <span>{formatTime(playbackTime)}</span>
-                <div className="flex items-center gap-1">
-                  {[40, 70, 30, 90, 60, 100, 45, 80, 50, 95, 30, 65, 85].map((h, i) => (
-                    <span
-                      key={i}
-                      className={`w-1 rounded-full transition-all duration-300 ${
-                        isPlaying ? 'bg-sky-500 animate-pulse' : 'bg-slate-200'
-                      }`}
-                      style={{ height: isPlaying ? `${Math.max(10, (h * (i % 2 === 0 ? 1 : 0.7)) / 3)}px` : '4px' }}
-                    />
-                  ))}
-                </div>
-                <span>{activeTrack.duration}</span>
-              </div>
-
-              {/* Progress bar */}
-              <div className="w-full h-2 bg-slate-200 rounded-full overflow-hidden relative cursor-pointer">
-                <div
-                  className="h-full bg-sky-500 rounded-full transition-all duration-300"
-                  style={{ width: `${Math.min(100, (playbackTime / 270) * 100)}%` }}
-                />
-              </div>
-            </div>
-
-            {/* Main Player Buttons */}
-            <div className="flex items-center justify-center lg:justify-start gap-4 w-full pt-2">
-              <button
-                onClick={togglePlay}
-                className="w-14 h-14 rounded-full bg-sky-600 text-white flex items-center justify-center shadow-md hover:bg-sky-700 hover:scale-105 active:scale-95 transition-all cursor-pointer"
-                aria-label={isPlaying ? 'Pause' : 'Play'}
-              >
-                {isPlaying ? (
-                  <Pause className="w-6 h-6 fill-white" />
-                ) : (
-                  <Play className="w-6 h-6 fill-white translate-x-0.5" />
-                )}
-              </button>
-
+            {/* Action Buttons */}
+            <div className="flex flex-wrap items-center justify-center lg:justify-start gap-3 w-full pt-1">
               <button
                 onClick={() => onOpenLyrics(activeTrack)}
-                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-slate-100 border border-slate-200 text-xs font-semibold uppercase tracking-wider text-slate-800 hover:text-sky-600 hover:border-sky-500 transition-all cursor-pointer"
+                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#FAF7F2] border border-slate-200 text-xs font-semibold uppercase tracking-wider text-slate-800 hover:text-[#722F37] hover:border-[#722F37] transition-all cursor-pointer shadow-xs"
               >
                 <FileText className="w-4 h-4 text-sky-600" />
-                <span>Read Lyrics</span>
+                <span>Read Full Lyrics</span>
               </button>
 
-              <button
-                onClick={() => setIsMuted(!isMuted)}
-                className="p-2.5 rounded-full bg-slate-100 border border-slate-200 text-slate-700 hover:text-sky-600 cursor-pointer"
-                aria-label="Toggle mute"
+              <a
+                href={activeTrack.spotifyUrl}
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#722F37] text-white font-bold text-xs uppercase tracking-wider hover:bg-[#58232B] transition-all cursor-pointer shadow-xs"
               >
-                {isMuted ? <VolumeX className="w-4 h-4 text-red-500" /> : <Volume2 className="w-4 h-4 text-sky-600" />}
-              </button>
+                <span>Open Spotify App</span>
+                <ExternalLink className="w-3.5 h-3.5" />
+              </a>
             </div>
 
             {/* Track Story Brief */}
-            <div className="p-4 rounded-2xl bg-sky-50/60 border border-sky-100 text-xs text-slate-700 italic w-full">
+            <div className="p-4 rounded-2xl bg-rose-50/50 border border-rose-100 text-xs text-slate-700 italic w-full text-left">
               "{activeTrack.story}"
             </div>
           </div>
@@ -177,7 +152,7 @@ export const AudioPlayerSection: React.FC<AudioPlayerSectionProps> = ({
             </div>
 
             {/* Track List */}
-            <div className="space-y-3 max-h-96 overflow-y-auto pr-1 custom-scrollbar">
+            <div className="space-y-3 max-h-[420px] overflow-y-auto pr-1 custom-scrollbar">
               {TRACKS.map((track) => {
                 const isSelected = track.id === activeTrackId;
                 return (
@@ -186,8 +161,8 @@ export const AudioPlayerSection: React.FC<AudioPlayerSectionProps> = ({
                     onClick={() => handleTrackChange(track.id)}
                     className={`p-4 rounded-2xl border transition-all cursor-pointer flex items-center justify-between gap-4 ${
                       isSelected
-                        ? 'bg-sky-50/80 border-sky-500 text-slate-900 shadow-md'
-                        : 'bg-slate-50 border-slate-200 text-slate-700 hover:bg-white hover:border-sky-300'
+                        ? 'bg-rose-50/70 border-[#722F37] text-slate-900 shadow-md'
+                        : 'bg-[#FAF7F2] border-slate-200 text-slate-700 hover:bg-white hover:border-sky-300'
                     }`}
                   >
                     <div className="flex items-center gap-4">
@@ -198,14 +173,14 @@ export const AudioPlayerSection: React.FC<AudioPlayerSectionProps> = ({
                           referrerPolicy="no-referrer"
                           className="w-full h-full object-cover"
                         />
-                        {isSelected && isPlaying && (
-                          <div className="absolute inset-0 bg-sky-600/60 flex items-center justify-center">
-                            <span className="flex h-3 w-3 rounded-full bg-white animate-ping" />
+                        {isSelected && (
+                          <div className="absolute inset-0 bg-[#722F37]/50 flex items-center justify-center">
+                            <Disc className="w-5 h-5 text-white animate-spin" />
                           </div>
                         )}
                       </div>
                       <div>
-                        <h5 className={`font-serif text-base ${isSelected ? 'text-sky-600 font-bold' : 'text-slate-900'}`}>
+                        <h5 className={`font-serif text-base ${isSelected ? 'text-[#722F37] font-bold' : 'text-slate-900'}`}>
                           {track.title}
                         </h5>
                         <p className="text-xs text-slate-500">{track.album}</p>
@@ -216,12 +191,12 @@ export const AudioPlayerSection: React.FC<AudioPlayerSectionProps> = ({
                       <span className="text-xs font-mono text-slate-500">{track.duration}</span>
                       <button
                         className={`w-8 h-8 rounded-full flex items-center justify-center ${
-                          isSelected && isPlaying
-                            ? 'bg-sky-600 text-white'
-                            : 'bg-slate-200 text-slate-700 hover:bg-sky-600 hover:text-white'
+                          isSelected
+                            ? 'bg-[#722F37] text-white'
+                            : 'bg-white border border-slate-200 text-slate-700 hover:bg-[#722F37] hover:text-white'
                         } transition-colors`}
                       >
-                        {isSelected && isPlaying ? (
+                        {isSelected ? (
                           <Pause className="w-3.5 h-3.5 fill-current" />
                         ) : (
                           <Play className="w-3.5 h-3.5 fill-current translate-x-0.2" />
@@ -240,18 +215,18 @@ export const AudioPlayerSection: React.FC<AudioPlayerSectionProps> = ({
               </span>
               <div className="flex flex-wrap items-center justify-center lg:justify-start gap-2">
                 {[
-                  { name: 'Spotify', color: 'hover:bg-sky-600 hover:text-white' },
-                  { name: 'Apple Music', color: 'hover:bg-sky-600 hover:text-white' },
-                  { name: 'YouTube Music', color: 'hover:bg-sky-600 hover:text-white' },
-                  { name: 'Audiomack', color: 'hover:bg-sky-600 hover:text-white' },
-                  { name: 'Boomplay', color: 'hover:bg-sky-600 hover:text-white' },
+                  { name: 'Spotify', url: activeTrack.spotifyUrl },
+                  { name: 'Apple Music', url: activeTrack.appleMusicUrl },
+                  { name: 'YouTube Music', url: activeTrack.youtubeUrl },
+                  { name: 'Audiomack', url: activeTrack.audiomackUrl },
+                  { name: 'Boomplay', url: activeTrack.spotifyUrl },
                 ].map((platform) => (
                   <a
                     key={platform.name}
-                    href={activeTrack.spotifyUrl}
+                    href={platform.url}
                     target="_blank"
                     rel="noreferrer"
-                    className={`px-3.5 py-1.5 rounded-full bg-slate-100 border border-slate-200 text-xs font-semibold text-slate-700 transition-all flex items-center gap-1.5 ${platform.color}`}
+                    className="px-3.5 py-1.5 rounded-full bg-[#FAF7F2] border border-slate-200 text-xs font-semibold text-slate-700 hover:bg-[#722F37] hover:text-white transition-all flex items-center gap-1.5 shadow-xs"
                   >
                     <span>{platform.name}</span>
                     <ExternalLink className="w-3 h-3 opacity-60" />
