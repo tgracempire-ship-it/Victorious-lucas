@@ -4,17 +4,17 @@ import { TESTIMONIALS } from '../data/artistData';
 
 export const TestimonialsSection: React.FC = () => {
   return (
-    <section className="py-24 bg-slate-50 relative overflow-hidden border-t border-slate-200">
+    <section className="py-24 bg-[#FAF7F2] relative overflow-hidden border-t border-slate-200/60">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Title */}
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-3">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-sky-50 border border-sky-200 text-sky-700 text-xs font-mono font-semibold uppercase tracking-widest">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-rose-50 border border-rose-200 text-[#722F37] text-xs font-mono font-semibold uppercase tracking-widest">
             <Sparkles className="w-3.5 h-3.5 text-sky-600" />
             <span>Ministry Impact & Testimonies</span>
           </div>
           <h2 className="text-3xl sm:text-5xl font-serif text-slate-900 tracking-tight">
-            WORDS OF BLESSING & ENDORSEMENTS
+            WORDS OF BLESSING & <span className="italic text-[#722F37]">ENDORSEMENTS</span>
           </h2>
           <p className="text-slate-600 text-sm sm:text-base font-light">
             Hear how God's presence through Victorious_tlucas' ministration has impacted churches, leaders, and believers.
@@ -26,14 +26,14 @@ export const TestimonialsSection: React.FC = () => {
           {TESTIMONIALS.map((item) => (
             <div
               key={item.id}
-              className="p-8 rounded-3xl bg-white border border-slate-200 hover:border-sky-500 transition-all duration-300 shadow-md flex flex-col justify-between space-y-6"
+              className="p-8 rounded-3xl bg-white border border-slate-200 hover:border-[#722F37] transition-all duration-300 shadow-md flex flex-col justify-between space-y-6"
             >
               <div className="space-y-4">
-                <div className="flex items-center justify-between text-sky-600">
+                <div className="flex items-center justify-between text-[#722F37]">
                   <Quote className="w-8 h-8 opacity-80" />
                   <div className="flex items-center gap-1">
                     {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="w-4 h-4 fill-sky-500 text-sky-500" />
+                      <Star key={i} className="w-4 h-4 fill-[#722F37] text-[#722F37]" />
                     ))}
                   </div>
                 </div>
@@ -48,11 +48,11 @@ export const TestimonialsSection: React.FC = () => {
                   src={item.avatar}
                   alt={item.author}
                   referrerPolicy="no-referrer"
-                  className="w-12 h-12 rounded-full object-cover border-2 border-sky-500"
+                  className="w-12 h-12 rounded-full object-cover border-2 border-[#722F37]"
                 />
                 <div>
                   <h4 className="text-sm font-serif font-bold text-slate-900">{item.author}</h4>
-                  <p className="text-xs text-sky-600 font-mono font-semibold">{item.role}</p>
+                  <p className="text-xs text-[#722F37] font-mono font-semibold">{item.role}</p>
                   <p className="text-[11px] text-slate-500">{item.churchOrOrg}</p>
                 </div>
               </div>
