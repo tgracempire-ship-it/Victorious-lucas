@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Instagram, Youtube, Music, Send, ShieldCheck, Heart, Sparkles } from 'lucide-react';
+import { Instagram, Youtube, Music, Facebook, Send, ShieldCheck, Heart, Sparkles } from 'lucide-react';
 import { ARTIST_INFO } from '../data/artistData';
 
 export const Footer: React.FC = () => {
@@ -91,6 +91,16 @@ export const Footer: React.FC = () => {
 
             {/* Social Icons with Milky Cream hover */}
             <div className="flex items-center gap-3 pt-2">
+              <a
+                href={ARTIST_INFO.socialLinks.facebook}
+                target="_blank"
+                rel="noreferrer"
+                className="w-10 h-10 rounded-full bg-white/10 border border-white/20 text-[#FAF7F2] hover:bg-[#FAF7F2] hover:text-[#722F37] flex items-center justify-center transition-all shadow-xs hover:scale-110 cursor-pointer"
+                aria-label="Facebook"
+              >
+                <Facebook className="w-4.5 h-4.5" />
+              </a>
+
               <a
                 href={ARTIST_INFO.socialLinks.instagram}
                 target="_blank"

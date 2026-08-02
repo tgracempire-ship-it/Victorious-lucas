@@ -85,13 +85,13 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onPlayTrack, onOpenBoo
             </div>
 
             {/* Stats Counter */}
-            <div className="pt-6 border-t border-slate-200/80 grid grid-cols-2 sm:grid-cols-4 gap-4 max-w-xl">
+            <div className="pt-6 border-t border-slate-200/80 grid grid-cols-2 sm:grid-cols-4 gap-3 w-full max-w-2xl">
               {ARTIST_INFO.stats.map((stat, idx) => (
-                <div key={idx} className="space-y-0.5 group">
-                  <div className="text-2xl sm:text-3xl font-serif italic text-[#722F37] group-hover:scale-110 transition-transform origin-left">
+                <div key={idx} className="p-3 rounded-2xl bg-white/80 border border-slate-200/70 shadow-2xs space-y-1 hover:border-[#722F37]/30 transition-all">
+                  <div className="text-sm sm:text-base font-serif italic font-bold text-[#722F37] leading-snug break-words">
                     {stat.value}
                   </div>
-                  <div className="text-xs text-slate-500 font-medium uppercase tracking-wider">
+                  <div className="text-[10px] sm:text-xs text-slate-500 font-mono font-semibold uppercase tracking-wider">
                     {stat.label}
                   </div>
                 </div>
