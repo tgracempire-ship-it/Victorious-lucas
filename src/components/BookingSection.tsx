@@ -124,7 +124,9 @@ export const BookingSection: React.FC = () => {
                   </div>
                   <div>
                     <span className="text-xs font-mono text-slate-500 block uppercase">Management Phone</span>
-                    <span className="text-sm font-bold text-slate-900">+1 (800) 555-GRACE / +234 800-VICTORIOUS</span>
+                    <a href={`tel:${ARTIST_INFO.phoneRaw}`} className="text-sm font-bold text-slate-900 hover:text-[#722F37]">
+                      {ARTIST_INFO.managementPhone}
+                    </a>
                   </div>
                 </div>
               </div>

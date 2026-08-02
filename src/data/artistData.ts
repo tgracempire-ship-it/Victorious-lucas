@@ -1,6 +1,7 @@
 import { Track, TourEvent, InstagramPost, Testimonial, VideoItem } from '../types';
 
 import vicOfficialImg from '../assets/images/vic_portrait_official.jpg';
+import vicSignatureLogo from '../assets/images/vic_signature_logo.jpg';
 import vicStagePinkSkirt from '../assets/images/vic_stage_pink_skirt.jpg';
 import vicStageBlackJacket from '../assets/images/vic_stage_black_jacket.jpg';
 import vicStageRedSuitClose from '../assets/images/vic_stage_red_suit_close.jpg';
@@ -12,6 +13,9 @@ export const ARTIST_INFO = {
   igHandle: "victorious_tlucas",
   igUrl: "https://instagram.com/victorious_tlucas",
   bookingEmail: "torilucas00@gmail.com",
+  managementPhone: "+234 913 336 9548",
+  phoneRaw: "09133369548",
+  logoImage: vicSignatureLogo,
   title: "Gospel Recording Artist, Worship Leader & Songwriter",
   motto: "Lifting Hearts & Glorifying Grace Through Spirit-Filled Worship",
   heroImage: vicOfficialImg,

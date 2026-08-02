@@ -70,9 +70,11 @@ export const Footer: React.FC = () => {
           {/* Brand Info */}
           <div className="md:col-span-4 space-y-4">
             <div className="flex items-center gap-3">
-              <div className="w-11 h-11 rounded-full bg-[#FAF7F2] border border-rose-300 flex items-center justify-center text-[#722F37] font-serif font-black text-xl shadow-md">
-                VT
-              </div>
+              <img
+                src={ARTIST_INFO.logoImage}
+                alt="Victorious Tlucas Logo"
+                className="w-12 h-12 rounded-full object-cover border-2 border-rose-300 shadow-md"
+              />
               <div>
                 <span className="text-xl font-serif text-white block">
                   {ARTIST_INFO.name}

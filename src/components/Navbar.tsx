@@ -56,12 +56,14 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBooking }) => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between gap-4">
           
-          {/* Logo / Artist Name with Gradient Ring */}
+          {/* Signature Microphone Logo / Artist Name with Gradient Ring */}
           <a href="#" className="flex items-center gap-3 group">
             <div className="relative p-0.5 rounded-full bg-gradient-to-tr from-[#722F37] via-sky-400 to-[#881337] shadow-sm group-hover:shadow-md transition-all group-hover:scale-105">
-              <div className="w-10 h-10 rounded-full bg-[#722F37] flex items-center justify-center text-white font-serif font-black text-lg">
-                V
-              </div>
+              <img
+                src={ARTIST_INFO.logoImage}
+                alt="Victorious Tlucas Logo"
+                className="w-11 h-11 rounded-full object-cover border-2 border-white"
+              />
               <span className="absolute -bottom-0.5 -right-0.5 flex h-3 w-3 rounded-full bg-emerald-500 border-2 border-white" />
             </div>
 
