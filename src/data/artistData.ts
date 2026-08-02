@@ -106,43 +106,39 @@ All power belongs to Jesus!`,
   },
   {
     id: "track-1",
-    title: "Victorious Grace",
-    album: "Victorious Grace - Single",
-    releaseYear: "2026",
-    duration: "4:32",
+    title: "Satisfy Medley (Spontaneous Worship)",
+    album: "Spontaneous Worship",
+    releaseYear: "2025",
+    duration: "6:15",
     coverImage: vicStageRedSuitFull,
     spotifyTrackId: "1BwtXJJhh2WHMCzGEmOr3X",
-    youtubeVideoId: "bbjr4ZbcD4s",
+    youtubeVideoId: "s0wUvqvY1AE",
     featured: false,
-    lyrics: `[Verse 1]
-Out of the shadows into Your light
-You pulled my soul from the darkest night
-Chains were broken, fears were gone
-In Your victory I carry on
+    lyrics: `[Spontaneous Worship]
+Satisfy my soul with Your presence Lord
+Nothing in this world compares to You
+Jesus You satisfy!
 
-[Chorus]
-Oh Your grace is victorious
-Your name is glorious
-Over every storm, over every trial
-Lord You reign eternal, child of Your grace
-Victorious grace!`,
-    story: "Written during an intense season of prayer and thanksgiving, 'Victorious Grace' serves as a reminder that through Christ, we overcome every trial.",
+[Refrain]
+Satisfy my heart, satisfy my soul
+Oh Lord Jesus, You are everything!`,
+    story: "A spontaneous worship encounter and Satisfy Medley by Victorious Lucas with Big Boss Music Empire.",
     spotifyUrl: "https://open.spotify.com/track/1BwtXJJhh2WHMCzGEmOr3X",
     appleMusicUrl: "https://apple.com/music",
-    youtubeUrl: "https://youtu.be/bbjr4ZbcD4s",
+    youtubeUrl: "https://youtu.be/s0wUvqvY1AE",
     audiomackUrl: "https://audiomack.com"
   },
   {
     id: "track-2",
-    title: "Everlasting Reign",
-    album: "Atmosphere of Praise",
+    title: "Live Worship & Praise Session",
+    album: "Live Ministration",
     releaseYear: "2025",
     duration: "5:15",
     coverImage: vicStageBlackJacket,
     spotifyTrackId: "0BDkEbQLtLfu8rGTyFwiXA",
-    youtubeVideoId: "s0wUvqvY1AE",
+    youtubeVideoId: "bbjr4ZbcD4s",
     featured: false,
-    lyrics: `[Verse]
+    lyrics: `[Live Worship]
 King of Kings, Lord of Lords
 Endless praise be unto You
 Nations bow, angels sing
@@ -151,12 +147,11 @@ All creation worships You
 [Chorus]
 You reign, You reign
 On the throne of majesty
-Forever and ever the same
-Lord of everlasting reign!`,
-    story: "A majestic worship anthem celebrating the unshakeable sovereignty of God over all nations.",
+Forever and ever the same!`,
+    story: "An anointed live worship session by Victorious Lucas ministering in praise and worship.",
     spotifyUrl: "https://open.spotify.com/track/0BDkEbQLtLfu8rGTyFwiXA",
     appleMusicUrl: "https://apple.com/music",
-    youtubeUrl: "https://youtu.be/s0wUvqvY1AE",
+    youtubeUrl: "https://youtu.be/bbjr4ZbcD4s",
     audiomackUrl: "https://audiomack.com"
   }
 ];
