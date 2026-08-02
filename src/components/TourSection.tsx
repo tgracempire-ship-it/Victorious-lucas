@@ -121,7 +121,7 @@ export const TourSection: React.FC<TourSectionProps> = ({ onOpenBooking }) => {
               <div className="flex items-center gap-3 w-full lg:w-auto justify-end pt-4 lg:pt-0 border-t lg:border-t-0 border-slate-200">
                 <button
                   onClick={() => handleAddToCalendar(event)}
-                  className="px-4 py-2.5 rounded-full bg-white border border-slate-200 text-xs font-semibold text-slate-700 hover:text-[#722F37] hover:border-[#722F37] transition-all flex items-center gap-1.5 cursor-pointer shadow-xs"
+                  className="px-5 py-2.5 rounded-full bg-white border border-slate-200 text-xs font-semibold text-slate-700 hover:text-[#722F37] hover:border-[#722F37] transition-all flex items-center gap-1.5 cursor-pointer shadow-xs"
                 >
                   {calAdded === event.id ? (
                     <>
@@ -131,17 +131,9 @@ export const TourSection: React.FC<TourSectionProps> = ({ onOpenBooking }) => {
                   ) : (
                     <>
                       <Plus className="w-4 h-4 text-[#722F37]" />
-                      <span>Add Calendar</span>
+                      <span>Add to Calendar</span>
                     </>
                   )}
-                </button>
-
-                <button
-                  onClick={onOpenBooking}
-                  className="px-6 py-2.5 rounded-full bg-[#722F37] text-white font-bold text-xs uppercase tracking-widest hover:bg-[#58232B] transition-all shadow-md shadow-[#722F37]/20 flex items-center gap-1.5 cursor-pointer"
-                >
-                  <Ticket className="w-4 h-4" />
-                  <span>RSVP / Tickets</span>
                 </button>
               </div>
 

@@ -11,6 +11,7 @@ export const ARTIST_INFO = {
   name: "Victorious Tlucas",
   igHandle: "victorious_tlucas",
   igUrl: "https://instagram.com/victorious_tlucas",
+  bookingEmail: "torilucas00@gmail.com",
   title: "Gospel Recording Artist, Worship Leader & Songwriter",
   motto: "Lifting Hearts & Glorifying Grace Through Spirit-Filled Worship",
   heroImage: vicOfficialImg,
@@ -26,10 +27,10 @@ From intimate altar calls to massive festival stages, Victorious' single-minded 
     text: "But thanks be to God! He gives us the victory through our Lord Jesus Christ."
   },
   stats: [
-    { label: "Global Streams", value: "1.2M+" },
-    { label: "Instagram Followers", value: "@victorious_tlucas" },
-    { label: "Live Worship Gatherings", value: "150+" },
-    { label: "Nations Reached", value: "24+" }
+    { label: "Worship Calling", value: "Gospel & Praise" },
+    { label: "Instagram", value: "@victorious_tlucas" },
+    { label: "Ministry Focus", value: "Spirit-Filled" },
+    { label: "Kingdom Sound", value: "Grace & Glory" }
   ],
   socialLinks: {
     instagram: "https://instagram.com/victorious_tlucas",
@@ -50,7 +51,7 @@ export const TRACKS: Track[] = [
     duration: "3:26",
     coverImage: "https://i.scdn.co/image/ab67616d00001e02a668d944ec9b39b83b5d93c2",
     spotifyTrackId: "1BwtXJJhh2WHMCzGEmOr3X",
-    youtubeVideoId: "s9tY81G11zM",
+    youtubeVideoId: "s0wUvqvY1AE",
     featured: true,
     lyrics: `[Verse 1]
 On this road of faith I walk with You
@@ -70,7 +71,7 @@ Glory to His Name!`,
     story: "A soul-stirring worship anthem by Vic Lucas, Victorious Lucas, and House of Faith expressing deep trust through life's spiritual journey.",
     spotifyUrl: "https://open.spotify.com/track/1BwtXJJhh2WHMCzGEmOr3X?si=ZVce0BscTTSRN1y4o6VvyA",
     appleMusicUrl: "https://music.apple.com/artist/victorious-lucas",
-    youtubeUrl: "https://www.youtube.com/watch?v=s9tY81G11zM",
+    youtubeUrl: "https://youtu.be/s0wUvqvY1AE",
     audiomackUrl: "https://audiomack.com"
   },
   {
@@ -81,7 +82,7 @@ Glory to His Name!`,
     duration: "11:43",
     coverImage: "https://i.scdn.co/image/ab67616d0000b273558706eddfde411ad455ec93",
     spotifyTrackId: "0BDkEbQLtLfu8rGTyFwiXA",
-    youtubeVideoId: "F3aJz02e9S0",
+    youtubeVideoId: "IDuJDfl1134",
     featured: true,
     lyrics: `[Spontaneous Worship Ministration]
 Alagbara nla ni O, God of all Power!
@@ -96,7 +97,7 @@ All power belongs to Jesus!`,
     story: "A profound 11-minute live extended worship encounter featuring Ty Bello, Victorious Lucas, Pastor Shola Okodugha, Folabi Nuel, Pelumi Deborah, and anointed song ministers.",
     spotifyUrl: "https://open.spotify.com/track/0BDkEbQLtLfu8rGTyFwiXA?si=AfT9YDD2S9SUKK9RN301ag",
     appleMusicUrl: "https://music.apple.com/artist/victorious-lucas",
-    youtubeUrl: "https://www.youtube.com/watch?v=F3aJz02e9S0",
+    youtubeUrl: "https://youtu.be/IDuJDfl1134",
     audiomackUrl: "https://audiomack.com"
   },
   {
@@ -107,7 +108,7 @@ All power belongs to Jesus!`,
     duration: "4:32",
     coverImage: vicStageRedSuitFull,
     spotifyTrackId: "1BwtXJJhh2WHMCzGEmOr3X",
-    youtubeVideoId: "s9tY81G11zM",
+    youtubeVideoId: "bbjr4ZbcD4s",
     featured: false,
     lyrics: `[Verse 1]
 Out of the shadows into Your light
@@ -124,7 +125,7 @@ Victorious grace!`,
     story: "Written during an intense season of prayer and thanksgiving, 'Victorious Grace' serves as a reminder that through Christ, we overcome every trial.",
     spotifyUrl: "https://open.spotify.com/track/1BwtXJJhh2WHMCzGEmOr3X",
     appleMusicUrl: "https://apple.com/music",
-    youtubeUrl: "https://www.youtube.com/watch?v=s9tY81G11zM",
+    youtubeUrl: "https://youtu.be/bbjr4ZbcD4s",
     audiomackUrl: "https://audiomack.com"
   },
   {
@@ -135,7 +136,7 @@ Victorious grace!`,
     duration: "5:15",
     coverImage: vicStageBlackJacket,
     spotifyTrackId: "0BDkEbQLtLfu8rGTyFwiXA",
-    youtubeVideoId: "F3aJz02e9S0",
+    youtubeVideoId: "s0wUvqvY1AE",
     featured: false,
     lyrics: `[Verse]
 King of Kings, Lord of Lords
@@ -151,7 +152,7 @@ Lord of everlasting reign!`,
     story: "A majestic worship anthem celebrating the unshakeable sovereignty of God over all nations.",
     spotifyUrl: "https://open.spotify.com/track/0BDkEbQLtLfu8rGTyFwiXA",
     appleMusicUrl: "https://apple.com/music",
-    youtubeUrl: "https://www.youtube.com/watch?v=F3aJz02e9S0",
+    youtubeUrl: "https://youtu.be/s0wUvqvY1AE",
     audiomackUrl: "https://audiomack.com"
   }
 ];
@@ -166,8 +167,7 @@ export const TOUR_EVENTS: TourEvent[] = [
     venue: "Grace Cathedral International",
     location: "Lagos, Nigeria",
     city: "Lagos",
-    status: "Tickets Available",
-    ticketUrl: "#book",
+    status: "Upcoming Gathering",
     featured: true
   },
   {
@@ -179,8 +179,7 @@ export const TOUR_EVENTS: TourEvent[] = [
     venue: "Abundant Life Worship Center",
     location: "Atlanta, GA, USA",
     city: "Atlanta",
-    status: "Tickets Available",
-    ticketUrl: "#book",
+    status: "Upcoming Gathering",
     featured: true
   },
   {
@@ -193,7 +192,6 @@ export const TOUR_EVENTS: TourEvent[] = [
     location: "London, UK",
     city: "London",
     status: "Free Admission",
-    ticketUrl: "#book",
     featured: false
   },
   {
@@ -205,8 +203,7 @@ export const TOUR_EVENTS: TourEvent[] = [
     venue: "Freedom Worship Arena",
     location: "Abuja, Nigeria",
     city: "Abuja",
-    status: "Upcoming",
-    ticketUrl: "#book",
+    status: "Upcoming Gathering",
     featured: false
   }
 ];
@@ -217,9 +214,9 @@ export const INSTAGRAM_POSTS: InstagramPost[] = [
     type: "photo",
     imageUrl: vicStagePinkSkirt,
     caption: "'Thanks be to God who always leads us in triumph!' 🕊️ Live ministration at The New Ikeja. Remembering that your current trial is just the backdrop for your upcoming testimony! @victorious_tlucas",
-    likes: "6,850",
-    comments: "542",
-    date: "TODAY",
+    likes: "Live Ministration",
+    comments: "Worship Encounter",
+    date: "REENT MINISTRATION",
     url: "https://instagram.com/victorious_tlucas"
   },
   {
@@ -227,19 +224,19 @@ export const INSTAGRAM_POSTS: InstagramPost[] = [
     type: "reel",
     imageUrl: vicStageBlackJacket,
     caption: "He inhabits the praises of His people 🙌🔥 Powerful worship encounter leading the body of Christ into God's presence! #VictoriousTlucas #TheJourney #GospelMusic #WorshipLeader @victorious_tlucas",
-    likes: "4,820",
-    comments: "342",
-    date: "2 DAYS AGO",
+    likes: "Live Ministration",
+    comments: "Worship Encounter",
+    date: "REENT MINISTRATION",
     url: "https://instagram.com/victorious_tlucas"
   },
   {
     id: "ig-3",
     type: "photo",
     imageUrl: vicStageRedSuitClose,
-    caption: "Worshipping with all my heart ❤️ 'THE JOURNEY' & 'ALAGBARA' are streaming live on Spotify & YouTube! Drop a ❤️ if this worship blesses your spirit! @victorious_tlucas",
-    likes: "8,930",
-    comments: "780",
-    date: "1 WEEK AGO",
+    caption: "Worshipping with all my heart ❤️ 'THE JOURNEY' & 'ALAGBARA' are streaming live on Spotify & YouTube! @victorious_tlucas",
+    likes: "Live Ministration",
+    comments: "Worship Encounter",
+    date: "REENT MINISTRATION",
     url: "https://instagram.com/victorious_tlucas"
   },
   {
@@ -247,9 +244,9 @@ export const INSTAGRAM_POSTS: InstagramPost[] = [
     type: "video",
     imageUrl: vicStageRedSuitFull,
     caption: "Live on stage ministering 'Alagbara' & 'Echoes of Worship' 🎙️✨ God's presence was heavy in the room! @victorious_tlucas",
-    likes: "5,410",
-    comments: "298",
-    date: "2 WEEKS AGO",
+    likes: "Live Ministration",
+    comments: "Worship Encounter",
+    date: "REENT MINISTRATION",
     url: "https://instagram.com/victorious_tlucas"
   }
 ];
@@ -257,38 +254,38 @@ export const INSTAGRAM_POSTS: InstagramPost[] = [
 export const VIDEOS: VideoItem[] = [
   {
     id: "v-1",
-    title: "ALAGBARA - TY Bello, Victorious Lucas, Pastor Shola Okodugha",
-    youtubeId: "s9tY81G11zM",
+    title: "Victorious Tlucas - Live Worship Ministration",
+    youtubeId: "s0wUvqvY1AE",
     thumbnail: vicStageRedSuitClose,
-    duration: "7:04",
-    views: "890K views",
-    category: "Music Video"
-  },
-  {
-    id: "v-2",
-    title: "Alagbara (Extended Version) - Live Ministration with TY Bello",
-    youtubeId: "F3aJz02e9S0",
-    thumbnail: vicStageBlackJacket,
-    duration: "11:43",
-    views: "580K views",
+    duration: "Live Worship",
+    views: "Official Video",
     category: "Live Worship"
   },
   {
+    id: "v-2",
+    title: "Victorious Tlucas - Praise & Worship Encounter",
+    youtubeId: "IDuJDfl1134",
+    thumbnail: vicStageBlackJacket,
+    duration: "Live Ministration",
+    views: "Official Video",
+    category: "Music Video"
+  },
+  {
     id: "v-3",
-    title: "The Journey - Official Worship Track & Ministration",
-    youtubeId: "s9tY81G11zM",
+    title: "Victorious Tlucas - Spirit-Led Worship Session",
+    youtubeId: "bbjr4ZbcD4s",
     thumbnail: vicStagePinkSkirt,
-    duration: "3:30",
-    views: "420K views",
+    duration: "Live Worship",
+    views: "Official Video",
     category: "Acoustic"
   },
   {
     id: "v-4",
-    title: "Yeshua! - Official Worship & Praise Video",
-    youtubeId: "F3aJz02e9S0",
+    title: "ALAGBARA - TY Bello, Victorious Lucas, Pastor Shola Okodugha",
+    youtubeId: "s9tY81G11zM",
     thumbnail: vicStageWhiteShirt,
-    duration: "4:15",
-    views: "310K views",
+    duration: "7:04",
+    views: "Official Video",
     category: "Testimony"
   }
 ];

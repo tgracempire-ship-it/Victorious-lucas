@@ -100,8 +100,8 @@ export const BookingSection: React.FC = () => {
                   </div>
                   <div>
                     <span className="text-xs font-mono text-slate-500 block uppercase">Booking Email</span>
-                    <a href="mailto:booking@victorioustlucas.com" className="text-sm font-bold text-slate-900 hover:text-[#722F37]">
-                      booking@victorioustlucas.com
+                    <a href={`mailto:${ARTIST_INFO.bookingEmail}`} className="text-sm font-bold text-slate-900 hover:text-[#722F37]">
+                      {ARTIST_INFO.bookingEmail}
                     </a>
                   </div>
                 </div>
