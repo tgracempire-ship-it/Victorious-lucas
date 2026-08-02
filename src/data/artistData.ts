@@ -31,7 +31,7 @@ From intimate altar calls to massive festival stages, Victorious' single-minded 
   ],
   socialLinks: {
     instagram: "https://instagram.com/victorious_tlucas",
-    youtube: "https://youtube.com/@victorious_tlucas",
+    youtube: "https://youtube.com/@theviclucas",
     spotify: "https://open.spotify.com/track/1BwtXJJhh2WHMCzGEmOr3X",
     appleMusic: "https://music.apple.com/artist/victorious-lucas",
     tiktok: "https://tiktok.com/@victorious_tlucas",
@@ -247,17 +247,17 @@ export const INSTAGRAM_POSTS: InstagramPost[] = [
 export const VIDEOS: VideoItem[] = [
   {
     id: "v-1",
-    title: "The Journey - Official Worship Video",
-    youtubeId: "dQw4w9WgXcQ",
+    title: "ALAGBARA - TY Bello, Victorious Lucas, Pastor Shola Okodugha",
+    youtubeId: "s9tY81G11zM",
     thumbnail: vicOfficialImg,
-    duration: "3:30",
-    views: "320K views",
+    duration: "7:04",
+    views: "890K views",
     category: "Music Video"
   },
   {
     id: "v-2",
-    title: "Alagbara (Extended Version) - Live Ministration with Ty Bello",
-    youtubeId: "dQw4w9WgXcQ",
+    title: "Alagbara (Extended Version) - Live Ministration with TY Bello",
+    youtubeId: "F3aJz02e9S0",
     thumbnail: heroImg,
     duration: "11:43",
     views: "580K views",
@@ -265,11 +265,20 @@ export const VIDEOS: VideoItem[] = [
   },
   {
     id: "v-3",
-    title: "The Heart Behind the Music - Ministry Testimony",
-    youtubeId: "dQw4w9WgXcQ",
+    title: "The Journey - Official Worship Track & Ministration",
+    youtubeId: "s9tY81G11zM",
     thumbnail: vicOfficialImg,
-    duration: "8:15",
-    views: "95K views",
+    duration: "3:30",
+    views: "420K views",
+    category: "Acoustic"
+  },
+  {
+    id: "v-4",
+    title: "Yeshua! - Official Worship & Praise Video",
+    youtubeId: "F3aJz02e9S0",
+    thumbnail: heroImg,
+    duration: "4:15",
+    views: "310K views",
     category: "Testimony"
   }
 ];
