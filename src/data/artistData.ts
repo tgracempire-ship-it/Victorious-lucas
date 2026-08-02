@@ -1,9 +1,11 @@
 import { Track, TourEvent, InstagramPost, Testimonial, VideoItem } from '../types';
 
 import vicOfficialImg from '../assets/images/vic_portrait_official.jpg';
-import heroImg from '../assets/images/victorious_worship_hero_1785687891278.jpg';
-import portraitImg from '../assets/images/victorious_portrait_1785687874603.jpg';
-import albumImg from '../assets/images/victorious_album_cover_1785687904837.jpg';
+import vicStagePinkSkirt from '../assets/images/vic_stage_pink_skirt.jpg';
+import vicStageBlackJacket from '../assets/images/vic_stage_black_jacket.jpg';
+import vicStageRedSuitClose from '../assets/images/vic_stage_red_suit_close.jpg';
+import vicStageRedSuitFull from '../assets/images/vic_stage_red_suit_full.jpg';
+import vicStageWhiteShirt from '../assets/images/vic_stage_white_shirt.jpg';
 
 export const ARTIST_INFO = {
   name: "Victorious Tlucas",
@@ -11,8 +13,8 @@ export const ARTIST_INFO = {
   igUrl: "https://instagram.com/victorious_tlucas",
   title: "Gospel Recording Artist, Worship Leader & Songwriter",
   motto: "Lifting Hearts & Glorifying Grace Through Spirit-Filled Worship",
-  heroImage: vicOfficialImg,
-  portraitImage: vicOfficialImg,
+  heroImage: vicStageRedSuitClose,
+  portraitImage: vicStageWhiteShirt,
   bioSummary: "Victorious Tlucas (@victorious_tlucas) is an anointed gospel worship leader and songwriter dedicated to leading believers into profound encounters with God's presence. With soul-stirring vocals, rich harmonies, and spirit-led lyrics, Victorious travels internationally bringing light, hope, and victory to generations.",
   fullBio: `Victorious Tlucas is a vibrant gospel recording artist, song minister, and passionate worship leader whose ministry has touched thousands of lives across churches, revival conferences, and global digital platforms. 
 
@@ -99,7 +101,7 @@ All power belongs to Jesus!`,
     album: "Victorious Grace - Single",
     releaseYear: "2026",
     duration: "4:32",
-    coverImage: albumImg,
+    coverImage: vicStageRedSuitFull,
     featured: false,
     lyrics: `[Verse 1]
 Out of the shadows into Your light
@@ -125,7 +127,7 @@ Victorious grace!`,
     album: "Atmosphere of Praise",
     releaseYear: "2025",
     duration: "5:15",
-    coverImage: heroImg,
+    coverImage: vicStageBlackJacket,
     featured: false,
     lyrics: `[Verse]
 King of Kings, Lord of Lords
@@ -205,8 +207,8 @@ export const INSTAGRAM_POSTS: InstagramPost[] = [
   {
     id: "ig-1",
     type: "photo",
-    imageUrl: vicOfficialImg,
-    caption: "'Thanks be to God who always leads us in triumph!' 🕊️ Remembering that your current trial is just the backdrop for your upcoming testimony. Stay blessed family! @victorious_tlucas",
+    imageUrl: vicStagePinkSkirt,
+    caption: "'Thanks be to God who always leads us in triumph!' 🕊️ Live ministration at The New Ikeja. Remembering that your current trial is just the backdrop for your upcoming testimony! @victorious_tlucas",
     likes: "6,850",
     comments: "542",
     date: "TODAY",
@@ -215,8 +217,8 @@ export const INSTAGRAM_POSTS: InstagramPost[] = [
   {
     id: "ig-2",
     type: "reel",
-    imageUrl: heroImg,
-    caption: "What a powerful atmosphere at last night's worship encounter! God truly inhabits the praises of His people 🙌🔥 #VictoriousTlucas #TheJourney #GospelMusic #WorshipLeader @victorious_tlucas",
+    imageUrl: vicStageBlackJacket,
+    caption: "He inhabits the praises of His people 🙌🔥 Powerful worship encounter leading the body of Christ into God's presence! #VictoriousTlucas #TheJourney #GospelMusic #WorshipLeader @victorious_tlucas",
     likes: "4,820",
     comments: "342",
     date: "2 DAYS AGO",
@@ -225,8 +227,8 @@ export const INSTAGRAM_POSTS: InstagramPost[] = [
   {
     id: "ig-3",
     type: "photo",
-    imageUrl: albumImg,
-    caption: "MY NEW SINGLE 'THE JOURNEY' IS OUT NOW ON SPOTIFY & ALL STREAMING PLATFORMS! 🎶 Link in bio! Drop a ❤️ if this song blesses your heart! @victorious_tlucas",
+    imageUrl: vicStageRedSuitClose,
+    caption: "Worshipping with all my heart ❤️ 'THE JOURNEY' & 'ALAGBARA' are streaming live on Spotify & YouTube! Drop a ❤️ if this worship blesses your spirit! @victorious_tlucas",
     likes: "8,930",
     comments: "780",
     date: "1 WEEK AGO",
@@ -235,8 +237,8 @@ export const INSTAGRAM_POSTS: InstagramPost[] = [
   {
     id: "ig-4",
     type: "video",
-    imageUrl: vicOfficialImg,
-    caption: "Behind the scenes recording 'Alagbara' (Extended Version) with Ty Bello & worship ministers. The vocal harmonies on this section give goosebumps! 🎙️✨ @victorious_tlucas",
+    imageUrl: vicStageRedSuitFull,
+    caption: "Live on stage ministering 'Alagbara' & 'Echoes of Worship' 🎙️✨ God's presence was heavy in the room! @victorious_tlucas",
     likes: "5,410",
     comments: "298",
     date: "2 WEEKS AGO",
@@ -249,7 +251,7 @@ export const VIDEOS: VideoItem[] = [
     id: "v-1",
     title: "ALAGBARA - TY Bello, Victorious Lucas, Pastor Shola Okodugha",
     youtubeId: "s9tY81G11zM",
-    thumbnail: vicOfficialImg,
+    thumbnail: vicStageRedSuitClose,
     duration: "7:04",
     views: "890K views",
     category: "Music Video"
@@ -258,7 +260,7 @@ export const VIDEOS: VideoItem[] = [
     id: "v-2",
     title: "Alagbara (Extended Version) - Live Ministration with TY Bello",
     youtubeId: "F3aJz02e9S0",
-    thumbnail: heroImg,
+    thumbnail: vicStageBlackJacket,
     duration: "11:43",
     views: "580K views",
     category: "Live Worship"
@@ -267,7 +269,7 @@ export const VIDEOS: VideoItem[] = [
     id: "v-3",
     title: "The Journey - Official Worship Track & Ministration",
     youtubeId: "s9tY81G11zM",
-    thumbnail: vicOfficialImg,
+    thumbnail: vicStagePinkSkirt,
     duration: "3:30",
     views: "420K views",
     category: "Acoustic"
@@ -276,7 +278,7 @@ export const VIDEOS: VideoItem[] = [
     id: "v-4",
     title: "Yeshua! - Official Worship & Praise Video",
     youtubeId: "F3aJz02e9S0",
-    thumbnail: heroImg,
+    thumbnail: vicStageWhiteShirt,
     duration: "4:15",
     views: "310K views",
     category: "Testimony"
@@ -287,25 +289,25 @@ export const TESTIMONIALS: Testimonial[] = [
   {
     id: "t-1",
     quote: "Victorious_tlucas brought an heavenly presence to our worship conference. The humility, spiritual weight, and vocal excellence left our congregation transformed.",
-    author: "Pastor Emmanuel David",
+    author: "Pastor Emmanuel Adebayo",
     role: "Senior Pastor",
-    churchOrOrg: "Grace City Church",
-    avatar: "https://picsum.photos/seed/pastor1/150/150"
+    churchOrOrg: "Grace Cathedral, Lagos",
+    avatar: vicStagePinkSkirt
   },
   {
     id: "t-2",
-    quote: "The single 'Victorious Grace' has been my daily prayer anthem during my lowest moments. God truly speaks through Victorious' ministry.",
-    author: "Deborah Okon",
-    role: "Worship Director & Faithful Listener",
-    churchOrOrg: "Lagos Revival Choir",
-    avatar: "https://picsum.photos/seed/director1/150/150"
+    quote: "Listening to 'Alagbara' and 'The Journey' during my personal prayer time ushered me into deep peace and healing. Truly an anointed song minister!",
+    author: "Dr. Grace Sterling",
+    role: "Worship Leader & Author",
+    churchOrOrg: "Atlanta Worship Fellowship",
+    avatar: vicStageRedSuitClose
   },
   {
     id: "t-3",
-    quote: "An authentic, spirit-led gospel minister who honors Jesus above everything else. Having Victorious on stage was an absolute blessing.",
-    author: "Rev. Marcus Thorne",
-    role: "Convener",
-    churchOrOrg: "Global Gospel Youth Summit",
-    avatar: "https://picsum.photos/seed/rev1/150/150"
+    quote: "The passion, authentic worship, and biblical depth in Victorious' ministrations are rare. A blessing to this generation!",
+    author: "Minister David K.",
+    role: "Music Director",
+    churchOrOrg: "Dominion Chapel, London",
+    avatar: vicStageBlackJacket
   }
 ];
