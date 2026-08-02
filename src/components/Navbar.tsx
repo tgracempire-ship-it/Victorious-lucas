@@ -37,7 +37,6 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBooking }) => {
 
   const navLinks = [
     { name: 'Music', href: '#music', id: 'music', icon: Music },
-    { name: 'Tour & Events', href: '#tour', id: 'tour', icon: Calendar },
     { name: 'About', href: '#about', id: 'about', icon: Info },
     { name: 'Instagram', href: '#instagram', id: 'instagram', icon: Instagram },
     { name: 'Videos', href: '#videos', id: 'videos', icon: Video },

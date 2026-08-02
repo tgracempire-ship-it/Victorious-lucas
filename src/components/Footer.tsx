@@ -142,7 +142,6 @@ export const Footer: React.FC = () => {
               <ul className="space-y-2.5 text-xs text-rose-100/80">
                 <li><a href="#hero" className="hover:text-white transition-colors flex items-center gap-1">Home</a></li>
                 <li><a href="#music" className="hover:text-white transition-colors flex items-center gap-1">Discography</a></li>
-                <li><a href="#tour" className="hover:text-white transition-colors flex items-center gap-1">Tour & Events</a></li>
                 <li><a href="#about" className="hover:text-white transition-colors flex items-center gap-1">About Ministry</a></li>
                 <li><a href="#instagram" className="hover:text-white transition-colors flex items-center gap-1">Instagram Feed</a></li>
               </ul>

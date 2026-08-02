@@ -242,7 +242,7 @@ export const INSTAGRAM_POSTS: InstagramPost[] = [
     id: "ig-4",
     type: "video",
     imageUrl: vicStageRedSuitFull,
-    caption: "Live on stage ministering 'Alagbara' & 'Echoes of Worship' 🎙️✨ God's presence was heavy in the room! @victorious_tlucas",
+    caption: "God's presence was heavy in the room! 🎙️✨ @victorious_tlucas",
     likes: "Live Ministration",
     comments: "Worship Encounter",
     date: "REENT MINISTRATION",

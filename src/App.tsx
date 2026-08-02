@@ -4,7 +4,6 @@ import { HeroSection } from './components/HeroSection';
 import { AudioPlayerSection } from './components/AudioPlayerSection';
 import { AboutSection } from './components/AboutSection';
 import { InstagramFeed } from './components/InstagramFeed';
-import { TourSection } from './components/TourSection';
 import { VideoGallerySection } from './components/VideoGallerySection';
 import { TestimonialsSection } from './components/TestimonialsSection';
 import { BookingSection } from './components/BookingSection';
@@ -49,8 +48,6 @@ export default function App() {
         <AboutSection />
 
         <InstagramFeed />
-
-        <TourSection onOpenBooking={() => setIsBookingModalOpen(true)} />
 
         <VideoGallerySection />
 
