@@ -1,0 +1,6 @@
+{
+  "name": "Victorious Tlucas | Gospel Artist",
+  "description": "Official landing page for gospel music artist Victorious_tlucas, featuring music releases, tour dates, Instagram updates, booking requests, and worship media.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
