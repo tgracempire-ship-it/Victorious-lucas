@@ -1,44 +1,15 @@
-import React, { useState } from 'react';
-import { ShieldCheck, Heart, Instagram, Flame, Sparkles, Award, Music, Radio, ChevronRight } from 'lucide-react';
+import React from 'react';
+import { ShieldCheck, Heart, Instagram, Flame } from 'lucide-react';
 import { ARTIST_INFO } from '../data/artistData';
 
 export const AboutSection: React.FC = () => {
-  const [activeMilestone, setActiveMilestone] = useState<number>(0);
-
-  const timelineMilestones = [
-    {
-      year: "Calling",
-      title: "Foundations & Anointing",
-      icon: Flame,
-      desc: "Birthed in deep prayer and scripture meditation (1 Cor 15:57), leading congregation praise and altar worship encounters."
-    },
-    {
-      year: "2025",
-      title: "'The Journey' Release",
-      icon: Music,
-      desc: "Release of 'The Journey' worship anthem and 'Satisfy Medley', celebrating faith and divine guidance."
-    },
-    {
-      year: "2025",
-      title: "Alagbara Live Ministration",
-      icon: Radio,
-      desc: "Anointed 11-minute live spontaneous worship encounter featuring TY Bello, Pastor Shola Okodugha, and gospel ministers."
-    },
-    {
-      year: "Present",
-      title: "Global Worship Ministry",
-      icon: Award,
-      desc: "Spreading victory, healing, and intimate praise through international church ministrations and digital platforms."
-    }
-  ];
-
   return (
     <section id="about" className="py-24 bg-[#FAF7F2] relative overflow-hidden">
       {/* Decorative gradient background circles */}
       <div className="absolute top-0 right-0 w-96 h-96 bg-rose-200/30 rounded-full blur-[100px] pointer-events-none" />
       <div className="absolute bottom-0 left-0 w-96 h-96 bg-sky-200/40 rounded-full blur-[100px] pointer-events-none" />
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 space-y-16">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           
@@ -146,48 +117,6 @@ export const AboutSection: React.FC = () => {
 
           </div>
 
-        </div>
-
-        {/* Interactive Ministry Timeline Section */}
-        <div className="pt-10 border-t border-slate-200/80 space-y-8">
-          <div className="text-center max-w-2xl mx-auto space-y-2">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-rose-50 border border-rose-200 text-[#722F37] text-xs font-mono font-bold uppercase tracking-widest">
-              <Sparkles className="w-3.5 h-3.5 text-sky-600" />
-              <span>Ministry Timeline</span>
-            </div>
-            <h3 className="text-2xl sm:text-4xl font-serif text-slate-900">
-              MILESTONES & <span className="italic text-[#722F37]">SPIRITUAL JOURNEY</span>
-            </h3>
-          </div>
-
-          {/* Timeline Cards Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-            {timelineMilestones.map((item, index) => {
-              const IconComp = item.icon;
-              const isActive = activeMilestone === index;
-              return (
-                <div
-                  key={index}
-                  onClick={() => setActiveMilestone(index)}
-                  className={`p-6 rounded-3xl border transition-all duration-300 cursor-pointer space-y-3 ${
-                    isActive
-                      ? 'bg-white border-[#722F37] shadow-xl scale-[1.03]'
-                      : 'bg-white/60 border-slate-200 hover:border-rose-300 shadow-xs'
-                  }`}
-                >
-                  <div className="flex items-center justify-between">
-                    <span className="px-3 py-1 rounded-full bg-rose-50 text-[#722F37] text-xs font-mono font-bold">
-                      {item.year}
-                    </span>
-                    <IconComp className={`w-5 h-5 ${isActive ? 'text-[#722F37]' : 'text-slate-400'}`} />
-                  </div>
-
-                  <h4 className="text-base font-serif font-bold text-slate-900">{item.title}</h4>
-                  <p className="text-xs text-slate-600 font-light leading-relaxed">{item.desc}</p>
-                </div>
-              );
-            })}
-          </div>
         </div>
 
       </div>
