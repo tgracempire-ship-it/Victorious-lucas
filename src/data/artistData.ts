@@ -72,7 +72,7 @@ Your presence is my destiny!
 [Outro]
 Vic Lucas, Victorious Lucas, House of Faith
 Glory to His Name!`,
-    story: "A soul-stirring worship anthem by Vic Lucas, Victorious Lucas, and House of Faith expressing deep trust through life's spiritual journey.",
+    story: "An anointed duet by Victorious Tlucas and her brother The Vicious Vic (@theviciousvic), expressing deep trust through life's spiritual journey.",
     spotifyUrl: "https://open.spotify.com/track/1BwtXJJhh2WHMCzGEmOr3X?si=ZVce0BscTTSRN1y4o6VvyA",
     appleMusicUrl: "https://music.apple.com/artist/victorious-lucas",
     youtubeUrl: "https://youtu.be/s0wUvqvY1AE",

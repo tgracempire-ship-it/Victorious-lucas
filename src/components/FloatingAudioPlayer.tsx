@@ -71,12 +71,6 @@ export const FloatingAudioPlayer: React.FC<FloatingAudioPlayerProps> = ({
                 <h4 className="text-xs sm:text-sm font-serif font-bold text-slate-900 truncate group-hover:text-[#722F37] transition-colors">
                   {activeTrack.title}
                 </h4>
-                {isPlaying && (
-                  <span className="flex items-end gap-0.5 h-3 flex-shrink-0">
-                    <span className="w-0.5 h-full bg-[#722F37] animate-pulse" style={{ animationDuration: '0.4s' }} />
-                    <span className="w-0.5 h-2/3 bg-sky-500 animate-pulse" style={{ animationDuration: '0.7s' }} />
-                  </span>
-                )}
               </div>
               <p className="text-[10px] sm:text-[11px] text-slate-500 truncate font-medium">
                 {activeTrack.album}
@@ -115,6 +109,14 @@ export const FloatingAudioPlayer: React.FC<FloatingAudioPlayerProps> = ({
             </button>
 
             <button
+              onClick={onOpenLyrics}
+              className="px-2 py-1 rounded-full bg-rose-50 border border-rose-200 text-[#722F37] text-[10px] font-bold font-mono uppercase tracking-wider hover:bg-rose-100 transition-colors flex items-center gap-1 flex-shrink-0 ml-1"
+            >
+              <Sparkles className="w-3 h-3 text-sky-600" />
+              <span>Lyrics</span>
+            </button>
+
+            <button
               onClick={() => setIsExpanded(!isExpanded)}
               className="p-1 rounded-full hover:bg-slate-100 text-slate-500 transition-colors"
             >
@@ -122,31 +124,6 @@ export const FloatingAudioPlayer: React.FC<FloatingAudioPlayerProps> = ({
             </button>
           </div>
 
-        </div>
-
-        {/* Animated Equalizer Wave Visualizer Bars */}
-        <div className="mt-2 pt-2 border-t border-slate-100 flex items-center justify-between gap-2">
-          <div className="flex items-center gap-0.5 sm:gap-1 h-3 flex-1 px-1">
-            {[...Array(20)].map((_, i) => (
-              <div
-                key={i}
-                className={`flex-1 rounded-full transition-all duration-300 ${
-                  isPlaying ? 'bg-[#722F37]' : 'bg-slate-200'
-                }`}
-                style={{
-                  height: isPlaying ? `${Math.floor(Math.sin(i + Date.now()) * 40 + 60)}%` : '20%',
-                }}
-              />
-            ))}
-          </div>
-
-          <button
-            onClick={onOpenLyrics}
-            className="px-2 py-0.5 sm:px-2.5 sm:py-1 rounded-full bg-rose-50 border border-rose-200 text-[#722F37] text-[10px] font-bold font-mono uppercase tracking-wider hover:bg-rose-100 transition-colors flex items-center gap-1 flex-shrink-0"
-          >
-            <Sparkles className="w-3 h-3 text-sky-600" />
-            <span>Lyrics</span>
-          </button>
         </div>
 
         {/* Expanded Drawer View */}

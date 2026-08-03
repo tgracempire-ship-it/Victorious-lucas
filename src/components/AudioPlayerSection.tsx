@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Play, Pause, Music, FileText, ExternalLink, Sparkles, Youtube, Disc, Radio, Sliders } from 'lucide-react';
+import { Play, Pause, Music, FileText, ExternalLink, Sparkles, Youtube, Disc } from 'lucide-react';
 import { Track } from '../types';
 import { TRACKS } from '../data/artistData';
 
@@ -20,6 +20,11 @@ export const AudioPlayerSection: React.FC<AudioPlayerSectionProps> = ({
 
   const handleTrackChange = (id: string) => {
     onSelectTrack(id);
+    const targetTrack = TRACKS.find((t) => t.id === id);
+    // Automatically switch to YouTube player tab for YouTube ministration sessions
+    if (targetTrack && (targetTrack.id === 'track-satisfy-medley' || targetTrack.id === 'track-live-worship' || !targetTrack.spotifyTrackId)) {
+      setPlayerSource('youtube');
+    }
   };
 
   return (
@@ -120,11 +125,11 @@ export const AudioPlayerSection: React.FC<AudioPlayerSectionProps> = ({
 
             {/* Embedded Live Media Player */}
             <div className="w-full space-y-3">
-              {playerSource === 'spotify' ? (
+              {playerSource === 'spotify' && activeTrack.spotifyTrackId ? (
                 <div className="w-full rounded-2xl overflow-hidden shadow-sm border border-slate-200 bg-[#FAF7F2] p-1">
                   <iframe
                     style={{ borderRadius: '14px' }}
-                    src={`https://open.spotify.com/embed/track/${activeTrack.spotifyTrackId || '1BwtXJJhh2WHMCzGEmOr3X'}?utm_source=generator&theme=0`}
+                    src={`https://open.spotify.com/embed/track/${activeTrack.spotifyTrackId}?utm_source=generator&theme=0`}
                     width="100%"
                     height="152"
                     frameBorder="0"
@@ -145,25 +150,6 @@ export const AudioPlayerSection: React.FC<AudioPlayerSectionProps> = ({
                   />
                 </div>
               )}
-            </div>
-
-            {/* Dynamic Sound Wave Equalizer Bars */}
-            <div className="w-full p-3 rounded-2xl bg-rose-50/70 border border-rose-200 flex items-center justify-between gap-3">
-              <div className="flex items-center gap-1 h-4 flex-1">
-                {[...Array(28)].map((_, i) => (
-                  <div
-                    key={i}
-                    className="flex-1 rounded-full bg-[#722F37] animate-pulse"
-                    style={{
-                      height: `${Math.floor(Math.sin(i * 0.8 + 1) * 35 + 50)}%`,
-                      animationDuration: `${0.4 + (i % 6) * 0.15}s`
-                    }}
-                  />
-                ))}
-              </div>
-              <span className="text-[10px] font-mono font-bold text-[#722F37] uppercase flex items-center gap-1">
-                <Sliders className="w-3 h-3 text-sky-600" /> Wave Visualizer
-              </span>
             </div>
 
             <div className="space-y-1 w-full text-left">
@@ -272,7 +258,7 @@ export const AudioPlayerSection: React.FC<AudioPlayerSectionProps> = ({
             {/* External Streaming Platform Badges */}
             <div className="pt-4 border-t border-slate-200 space-y-3">
               <span className="text-xs font-mono text-slate-500 uppercase tracking-widest block text-center lg:text-left">
-                Available On All Digital Streaming Platforms
+                Available On Official Digital Platforms
               </span>
               <div className="flex flex-wrap items-center justify-center lg:justify-start gap-2">
                 {[

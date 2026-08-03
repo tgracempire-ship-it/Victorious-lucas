@@ -95,40 +95,40 @@ export const Footer: React.FC = () => {
                 href={ARTIST_INFO.socialLinks.facebook}
                 target="_blank"
                 rel="noreferrer"
-                className="w-10 h-10 rounded-full bg-[#4A151E] border border-rose-900/60 text-white hover:bg-[#722F37] flex items-center justify-center transition-all shadow-xs hover:scale-110 cursor-pointer"
+                className="w-10 h-10 rounded-full bg-[#1877F2] text-white flex items-center justify-center transition-all shadow-md hover:scale-110 cursor-pointer"
                 aria-label="Facebook"
               >
-                <Facebook className="w-4.5 h-4.5" />
+                <Facebook className="w-5 h-5 fill-white" />
               </a>
 
               <a
                 href={ARTIST_INFO.socialLinks.instagram}
                 target="_blank"
                 rel="noreferrer"
-                className="w-10 h-10 rounded-full bg-[#4A151E] border border-rose-900/60 text-white hover:bg-[#722F37] flex items-center justify-center transition-all shadow-xs hover:scale-110 cursor-pointer"
+                className="w-10 h-10 rounded-full bg-gradient-to-tr from-amber-500 via-rose-500 to-purple-600 text-white flex items-center justify-center transition-all shadow-md hover:scale-110 cursor-pointer"
                 aria-label="Instagram"
               >
-                <Instagram className="w-4.5 h-4.5" />
+                <Instagram className="w-5 h-5" />
               </a>
 
               <a
                 href={ARTIST_INFO.socialLinks.youtube}
                 target="_blank"
                 rel="noreferrer"
-                className="w-10 h-10 rounded-full bg-[#4A151E] border border-rose-900/60 text-white hover:bg-[#722F37] flex items-center justify-center transition-all shadow-xs hover:scale-110 cursor-pointer"
+                className="w-10 h-10 rounded-full bg-[#FF0000] text-white flex items-center justify-center transition-all shadow-md hover:scale-110 cursor-pointer"
                 aria-label="YouTube"
               >
-                <Youtube className="w-4.5 h-4.5" />
+                <Youtube className="w-5 h-5 fill-white" />
               </a>
 
               <a
                 href={ARTIST_INFO.socialLinks.spotify}
                 target="_blank"
                 rel="noreferrer"
-                className="w-10 h-10 rounded-full bg-[#4A151E] border border-rose-900/60 text-white hover:bg-[#722F37] flex items-center justify-center transition-all shadow-xs hover:scale-110 cursor-pointer"
+                className="w-10 h-10 rounded-full bg-[#1DB954] text-white flex items-center justify-center transition-all shadow-md hover:scale-110 cursor-pointer"
                 aria-label="Spotify"
               >
-                <Music className="w-4.5 h-4.5" />
+                <Music className="w-5 h-5 fill-white" />
               </a>
             </div>
           </div>
