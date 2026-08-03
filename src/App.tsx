@@ -4,7 +4,6 @@ import { HeroSection } from './components/HeroSection';
 import { AudioPlayerSection } from './components/AudioPlayerSection';
 import { AboutSection } from './components/AboutSection';
 import { InstagramFeed } from './components/InstagramFeed';
-import { TestimonialsSection } from './components/TestimonialsSection';
 import { BookingSection } from './components/BookingSection';
 import { Footer } from './components/Footer';
 import { LyricsModal } from './components/LyricsModal';
@@ -66,8 +65,6 @@ export default function App() {
         <AboutSection />
 
         <InstagramFeed />
-
-        <TestimonialsSection />
 
         <BookingSection />
       </main>
