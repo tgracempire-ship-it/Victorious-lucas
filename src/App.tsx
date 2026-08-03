@@ -15,7 +15,8 @@ import { Track } from './types';
 
 export default function App() {
   const [activeTrackId, setActiveTrackId] = useState<string>(TRACKS[0].id);
-  const [isPlaying, setIsPlaying] = useState<boolean>(true);
+  const [isPlaying, setIsPlaying] = useState<boolean>(false);
+  const [isPlayerVisible, setIsPlayerVisible] = useState<boolean>(false);
   const [selectedLyricsTrack, setSelectedLyricsTrack] = useState<Track | null>(null);
   const [isBookingModalOpen, setIsBookingModalOpen] = useState<boolean>(false);
 
@@ -25,20 +26,21 @@ export default function App() {
   const handlePlayTrack = (trackId: string) => {
     setActiveTrackId(trackId);
     setIsPlaying(true);
-    const musicSection = document.getElementById('music');
-    if (musicSection) {
-      musicSection.scrollIntoView({ behavior: 'smooth' });
-    }
+    setIsPlayerVisible(true);
   };
 
   const handleNextTrack = () => {
     const nextIdx = (activeTrackIndex + 1) % TRACKS.length;
     setActiveTrackId(TRACKS[nextIdx].id);
+    setIsPlaying(true);
+    setIsPlayerVisible(true);
   };
 
   const handlePrevTrack = () => {
     const prevIdx = (activeTrackIndex - 1 + TRACKS.length) % TRACKS.length;
     setActiveTrackId(TRACKS[prevIdx].id);
+    setIsPlaying(true);
+    setIsPlayerVisible(true);
   };
 
   return (
@@ -58,6 +60,7 @@ export default function App() {
           onSelectTrack={(id) => {
             setActiveTrackId(id);
             setIsPlaying(true);
+            setIsPlayerVisible(true);
           }}
           onOpenLyrics={(track) => setSelectedLyricsTrack(track)}
         />
@@ -72,10 +75,15 @@ export default function App() {
       {/* Footer */}
       <Footer />
 
-      {/* Floating Audio Player with Animated Visualizer */}
+      {/* Floating Audio Player - Pops up only when music or video is clicked */}
       <FloatingAudioPlayer
         activeTrack={activeTrack}
         isPlaying={isPlaying}
+        isVisible={isPlayerVisible}
+        onClose={() => {
+          setIsPlayerVisible(false);
+          setIsPlaying(false);
+        }}
         onTogglePlay={() => setIsPlaying(!isPlaying)}
         onNextTrack={handleNextTrack}
         onPrevTrack={handlePrevTrack}
