@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Play, Pause, Music, FileText, ExternalLink, Sparkles, Youtube, Disc } from 'lucide-react';
+import { Play, Pause, Music, FileText, ExternalLink, Sparkles, Youtube, Disc, Radio, Sliders } from 'lucide-react';
 import { Track } from '../types';
 import { TRACKS } from '../data/artistData';
 
@@ -28,20 +28,62 @@ export const AudioPlayerSection: React.FC<AudioPlayerSectionProps> = ({
       <div className="absolute top-1/2 left-0 w-96 h-96 bg-sky-200/40 rounded-full blur-3xl pointer-events-none" />
       <div className="absolute bottom-0 right-0 w-96 h-96 bg-rose-200/30 rounded-full blur-3xl pointer-events-none" />
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 space-y-12">
         
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-12 space-y-3">
+        <div className="text-center max-w-3xl mx-auto space-y-3">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white border border-rose-200 text-[#722F37] text-xs font-mono font-semibold uppercase tracking-widest shadow-xs">
-            <Music className="w-3.5 h-3.5 text-sky-600" />
+            <Music className="w-3.5 h-3.5 text-sky-600 animate-spin" style={{ animationDuration: '6s' }} />
             <span>Official Digital Audio & Media Stream</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl font-serif text-slate-900 tracking-tight">
-            GOSPEL ANTHEMS & WORSHIP SOUNDS
+          <h2 className="text-3xl sm:text-5xl font-serif text-slate-900 tracking-tight">
+            GOSPEL ANTHEMS & <span className="italic text-[#722F37]">WORSHIP SOUNDS</span>
           </h2>
           <p className="text-slate-600 text-sm sm:text-base font-light">
             Stream official releases by Victorious_tlucas directly via Spotify and YouTube player integration.
           </p>
+        </div>
+
+        {/* Interactive Album Art Carousel / Cards Row */}
+        <div className="flex items-center gap-4 overflow-x-auto pb-4 pt-2 custom-scrollbar snap-x">
+          {TRACKS.map((track) => {
+            const isSelected = track.id === activeTrackId;
+            return (
+              <div
+                key={track.id}
+                onClick={() => handleTrackChange(track.id)}
+                className={`snap-center flex-shrink-0 w-64 sm:w-72 p-5 rounded-3xl border transition-all duration-300 cursor-pointer space-y-4 ${
+                  isSelected
+                    ? 'bg-white border-2 border-[#722F37] shadow-xl scale-[1.03]'
+                    : 'bg-white/80 border-slate-200 hover:border-rose-300 shadow-sm'
+                }`}
+              >
+                <div className="relative aspect-square rounded-2xl overflow-hidden shadow-inner group">
+                  <img
+                    src={track.coverImage}
+                    alt={track.title}
+                    referrerPolicy="no-referrer"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                  <div className={`absolute inset-0 bg-slate-900/40 flex items-center justify-center transition-opacity ${isSelected ? 'opacity-100' : 'opacity-0 group-hover:opacity-100'}`}>
+                    <div className="w-12 h-12 rounded-full bg-[#722F37] text-white flex items-center justify-center shadow-lg">
+                      {isSelected ? <Disc className="w-6 h-6 animate-spin" /> : <Play className="w-6 h-6 fill-white translate-x-0.5" />}
+                    </div>
+                  </div>
+                </div>
+
+                <div className="space-y-1">
+                  <h4 className="font-serif text-base font-bold text-slate-900 truncate">{track.title}</h4>
+                  <p className="text-xs text-slate-500 truncate">{track.album} ({track.releaseYear})</p>
+                </div>
+
+                <div className="flex items-center justify-between text-[11px] text-[#722F37] font-mono pt-2 border-t border-slate-100">
+                  <span className="font-bold">{track.duration}</span>
+                  <span className="underline">Tap to Play</span>
+                </div>
+              </div>
+            );
+          })}
         </div>
 
         {/* Main Audio Player Container */}
@@ -103,6 +145,25 @@ export const AudioPlayerSection: React.FC<AudioPlayerSectionProps> = ({
                   />
                 </div>
               )}
+            </div>
+
+            {/* Dynamic Sound Wave Equalizer Bars */}
+            <div className="w-full p-3 rounded-2xl bg-rose-50/70 border border-rose-200 flex items-center justify-between gap-3">
+              <div className="flex items-center gap-1 h-4 flex-1">
+                {[...Array(28)].map((_, i) => (
+                  <div
+                    key={i}
+                    className="flex-1 rounded-full bg-[#722F37] animate-pulse"
+                    style={{
+                      height: `${Math.floor(Math.sin(i * 0.8 + 1) * 35 + 50)}%`,
+                      animationDuration: `${0.4 + (i % 6) * 0.15}s`
+                    }}
+                  />
+                ))}
+              </div>
+              <span className="text-[10px] font-mono font-bold text-[#722F37] uppercase flex items-center gap-1">
+                <Sliders className="w-3 h-3 text-sky-600" /> Wave Visualizer
+              </span>
             </div>
 
             <div className="space-y-1 w-full text-left">
@@ -219,6 +280,7 @@ export const AudioPlayerSection: React.FC<AudioPlayerSectionProps> = ({
                   { name: 'Apple Music', url: activeTrack.appleMusicUrl },
                   { name: 'YouTube Music', url: activeTrack.youtubeUrl },
                   { name: 'Audiomack', url: activeTrack.audiomackUrl },
+                  { name: 'Shazam', url: 'https://www.shazam.com/song/1842170884/the-journey-feat-victorious-lucas-and-house-of-faith' },
                   { name: 'Boomplay', url: activeTrack.spotifyUrl },
                 ].map((platform) => (
                   <a

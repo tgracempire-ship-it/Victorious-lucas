@@ -1,0 +1,15 @@
+<!--
+  Add this <service> block inside the <application> tag of
+  android/app/src/main/AndroidManifest.xml (the one `react-native init`
+  generates for you). It's what tells Android that BankAlertListenerService
+  is allowed to receive notifications once the user grants access.
+-->
+<service
+    android:name=".BankAlertListenerService"
+    android:label="TrueAlert alert listener"
+    android:permission="android.permission.BIND_NOTIFICATION_LISTENER_SERVICE"
+    android:exported="false">
+    <intent-filter>
+        <action android:name="android.service.notification.NotificationListenerService" />
+    </intent-filter>
+</service>

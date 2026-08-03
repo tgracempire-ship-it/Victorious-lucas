@@ -1,0 +1,21 @@
+import javax.net.ssl.*
+import java.security.SecureRandom
+import java.security.cert.X509Certificate
+
+try {
+    def trustAllCerts = [
+        checkClientTrusted: { chain, authType -> },
+        checkServerTrusted: { chain, authType -> },
+        getAcceptedIssuers: { [] as X509Certificate[] }
+    ] as X509TrustManager
+
+    def sc = SSLContext.getInstance("TLS")
+    sc.init(null, [trustAllCerts] as TrustManager[], new SecureRandom())
+    HttpsURLConnection.setDefaultSSLSocketFactory(sc.getSocketFactory())
+    HttpsURLConnection.setDefaultHostnameVerifier({ hostname, session -> true } as HostnameVerifier)
+    
+    System.setProperty("jsse.enableSNIExtension", "true")
+    System.setProperty("com.sun.net.ssl.checkRevocation", "false")
+} catch (Exception e) {
+    e.printStackTrace()
+}
