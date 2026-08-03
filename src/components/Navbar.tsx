@@ -39,7 +39,6 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBooking }) => {
     { name: 'Music', href: '#music', id: 'music', icon: Music },
     { name: 'About', href: '#about', id: 'about', icon: Info },
     { name: 'Instagram', href: '#instagram', id: 'instagram', icon: Instagram },
-    { name: 'Videos', href: '#videos', id: 'videos', icon: Video },
     { name: 'Booking', href: '#booking', id: 'booking', icon: Mail },
   ];
 

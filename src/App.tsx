@@ -4,7 +4,6 @@ import { HeroSection } from './components/HeroSection';
 import { AudioPlayerSection } from './components/AudioPlayerSection';
 import { AboutSection } from './components/AboutSection';
 import { InstagramFeed } from './components/InstagramFeed';
-import { VideoGallerySection } from './components/VideoGallerySection';
 import { TestimonialsSection } from './components/TestimonialsSection';
 import { BookingSection } from './components/BookingSection';
 import { Footer } from './components/Footer';
@@ -67,8 +66,6 @@ export default function App() {
         <AboutSection />
 
         <InstagramFeed />
-
-        <VideoGallerySection />
 
         <TestimonialsSection />
 

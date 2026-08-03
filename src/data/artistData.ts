@@ -42,7 +42,7 @@ From intimate altar calls to massive festival stages, Victorious' single-minded 
     spotify: "https://open.spotify.com/track/1BwtXJJhh2WHMCzGEmOr3X",
     appleMusic: "https://music.apple.com/artist/victorious-lucas",
     tiktok: "https://tiktok.com/@victorious_tlucas",
-    facebook: "https://web.facebook.com/victorious.lucas.2025?mibextid=wwXIfr"
+    facebook: "https://web.facebook.com/victorious.lucas.2025?mibextid=wwXIfr&rdid=S5k6sXGe1KcJTGng&share_url=https%3A%2F%2Fweb.facebook.com%2Fshare%2F14jisyhVxpz%2F%3Fmibextid%3DwwXIfr%26_rdc%3D1%26_rdr#"
   }
 };
 

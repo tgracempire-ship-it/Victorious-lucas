@@ -276,12 +276,8 @@ export const AudioPlayerSection: React.FC<AudioPlayerSectionProps> = ({
               </span>
               <div className="flex flex-wrap items-center justify-center lg:justify-start gap-2">
                 {[
-                  { name: 'Spotify', url: activeTrack.spotifyUrl },
-                  { name: 'Apple Music', url: activeTrack.appleMusicUrl },
-                  { name: 'YouTube Music', url: activeTrack.youtubeUrl },
-                  { name: 'Audiomack', url: activeTrack.audiomackUrl },
-                  { name: 'Shazam', url: 'https://www.shazam.com/song/1842170884/the-journey-feat-victorious-lucas-and-house-of-faith' },
-                  { name: 'Boomplay', url: activeTrack.spotifyUrl },
+                  { name: 'Spotify Stream', url: activeTrack.spotifyUrl },
+                  { name: 'YouTube Channel', url: activeTrack.youtubeUrl },
                 ].map((platform) => (
                   <a
                     key={platform.name}
